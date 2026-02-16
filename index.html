@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -92,15 +92,27 @@
       align-items: center;
     }
 
-    /* Styling Logo */
+    /* Styling Logo Container */
     .brand {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      gap: 15px; /* Jarak antara logo gambar dan teks */
       cursor: pointer;
     }
 
+    .brand-img {
+      max-height: 60px; /* Membatasi tinggi logo agar tidak merusak layout */
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
     .brand-logo-text {
-      font-size: 1.5rem; 
+      font-size: 1.5rem; /* Ukuran font disesuaikan agar proporsional */
       font-weight: 800;
       text-transform: uppercase;
       line-height: 1.1;
@@ -139,7 +151,7 @@
     }
 
     .nav-link {
-      color: var(--text-dark); /* FIX: Warna diubah jadi gelap agar terlihat di background putih */
+      color: var(--text-dark);
       font-weight: 500;
       font-size: 0.95rem;
       position: relative;
@@ -183,8 +195,9 @@
     /* --- HERO SECTION --- */
     .hero {
       position: relative;
+      /* Menggunakan background industri abstrak agar lebih estetis */
       background: linear-gradient(rgba(31, 41, 55, 0.85), rgba(31, 41, 55, 0.9)), 
-                  url('https://files.catbox.moe/6agle1.png') no-repeat center center/cover;
+                  url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
       /* Animasi latar belakang halus */
       animation: zoomBg 20s infinite alternate; 
       color: var(--bg-white);
@@ -266,7 +279,7 @@
 
     /* Buy / WhatsApp Button */
     .buy-btn {
-      background: linear-gradient(to right, #80ff00, #00a634); /* FIX: Syntax gradient diperbaiki */
+      background: linear-gradient(to right, #80ff00, #00a634);
       color: white;
       cursor: pointer;
       font-size: 1rem;
@@ -278,12 +291,13 @@
       border: none;
       transition: var(--transition);
       box-shadow: 0 4px 15px rgba(0, 166, 52, 0.4);
-      gap: 10px; /* Jarak antara ikon dan teks */
+      gap: 10px;
     }
 
     .buy-btn:hover {
       filter: brightness(1.1);
       transform: translateY(-3px);
+      background: linear-gradient(to right, #00a634, #00faa7);
       box-shadow: 0 6px 20px rgba(0, 166, 52, 0.6);
     }
 
@@ -330,7 +344,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      align-items: start;
+      align-items: stretch; /* Agar tinggi card sama */
     }
 
     .catalog-card {
@@ -342,6 +356,8 @@
       border-top: 5px solid var(--primary-color);
       height: 100%;
       transition: var(--transition);
+      display: flex;
+      flex-direction: column;
     }
 
     .catalog-card:hover {
@@ -358,6 +374,10 @@
       gap: 12px;
       border-bottom: 1px solid var(--bg-light);
       padding-bottom: 15px;
+    }
+
+    .catalog-list {
+      flex-grow: 1;
     }
 
     .catalog-list li {
@@ -397,7 +417,7 @@
     
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
 
@@ -548,7 +568,7 @@
     /* --- FOOTER --- */
     footer {
       background-color: var(--secondary-color);
-      color: #d1d5db;
+      color: #ffffff;
       text-align: center;
       padding: 40px 20px;
       margin-top: 80px;
@@ -566,8 +586,10 @@
     @media (max-width: 768px) {
       /* Header Mobile */
       .header-top { padding: 10px 20px; }
-      .brand-logo-text { font-size: 1.2rem; }
-      .brand-tagline { font-size: 0.75rem; }
+      .brand { gap: 10px; }
+      .brand-img { max-height: 40px; } /* Kecilkan logo di mobile */
+      .brand-logo-text { font-size: 1.1rem; } /* Sesuaikan teks logo */
+      .brand-tagline { font-size: 0.7rem; }
       
       /* Nav Mobile */
       .menu-toggle { display: flex; }
@@ -585,6 +607,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        border-top: none;
       }
       
       nav.active {
@@ -639,11 +662,15 @@
   <!-- Header -->
   <header>
     <div class="header-top">
-      <div class="brand">
-        <div class="brand-logo-text">
-          <span class="txt-black">PT. AGAPE OLIVIA</span> <span class="txt-red">SUKSES</span>
+      <div class="brand" onclick="window.scrollTo(0,0)">
+        <!-- Perbaikan: URL diganti menjadi SRC -->
+        <img src="https://files.catbox.moe/6agle1.png" alt="Logo PT Agape Olivia Sukses" class="brand-img">
+        <div class="brand-text">
+          <div class="brand-logo-text">
+            <span class="txt-black">PT. AGAPE OLIVIA</span> <span class="txt-red">SUKSES</span>
+          </div>
+          <div class="brand-tagline">Spesialis Heater Element & Sistem Pemanas Industri</div>
         </div>
-        <div class="brand-tagline">Spesialis Heater Element & Sistem Pemanas Industri</div>
       </div>
       
       <!-- Tombol Hamburger untuk Mobile -->
@@ -654,11 +681,13 @@
       </div>
     </div>
 
-    <nav id="navbar">
+     <nav id="navbar">
       <div class="nav-container">
         <ul class="nav-list" id="nav-list">
           <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+          <li><a href="#menu" class="nav-link">Daftar Produk</a></li>
           <li><a href="#services" class="nav-link">Produk Unggulan</a></li>
+          <!--<li><a href="#daftar" class="nav-link">Client</a></li>-->
           <li><a href="#contact" class="nav-link">Kontak</a></li>
         </ul>
       </div>
@@ -667,6 +696,7 @@
 
   <main>
     <!-- Hero Section -->
+     <section id="about">
     <section class="hero">
       <h2>Solusi Pemanas Industri Terpercaya</h2>
       <p>Kami menyediakan kualitas heater element terbaik untuk mendukung efisiensi dan kehandalan produksi manufaktur Anda.</p>
@@ -675,9 +705,9 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="reveal">
-      <div class="section-header">
+    <!-- About & Catalog Section (Diperbaiki Strukturnya) -->
+    <section id="about">
+      <div class="section-header reveal">
         <h2>Tentang Kami</h2>
         <div class="separator-line"></div>
         <p style="margin-top: 15px;">
@@ -685,7 +715,13 @@
           heater element (alat pemanas industri) untuk berbagai kebutuhan manufaktur.
         </p>
       </div>
-      
+
+      <!-- Grid Katalog Dipindahkan ke dalam section agar rapi -->
+      <section id="menu"></section>
+      <div class="section-header reveal">
+        <h2>Daftar Produk</h2>
+        <div class="separator-line"></div>
+      </div>
       <div class="about-grid">
         <!-- Kolom Spare Part -->
         <div class="catalog-card reveal">
@@ -787,9 +823,56 @@
               <p>Solusi tepat untuk memanaskan cairan langsung di dalam tangki atau bak proses industri secara efisien.</p>
             </div>
           </div>
+          
+           <!-- Card 5 -->
+           <div class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/lb5mi4.jpg" alt="Cast In Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Cast In Heater</h3>
+              <p>Pemanas yang dicast dalam satu kesatuan logam (aluminium/bronze) untuk distribusi panas yang sangat merata dan tahan lama pada plat bagian.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/7a4flz.jpg" alt="Bobin Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Bobin Heater</h3>
+              <p>Elemen pemanas spiral kualitas tinggi yang umum digunakan pada pemanas air boiler, tangki penampung, dan sistem pemanas udara sirkulasi.</p>
+            </div>
+          </div>
+          
+           <!-- Card 7 -->
+           <div class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/1mazhv.jpg" alt="Ceramic Infra Red Heater" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Ceramic Infra Red Heater</h3>
+              <p>Pemanas inframerah berbasis keramik yang efisien untuk proses pengeringan (drying), kuring, dan pemanasan tanpa kontak langsung.</p>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>
+    
+ <!--<section id='daftar' class="reveal">
+       <div class="section-header">
+        <div class="">
+        <h2>Client Kami</h2>
+        <div class="separator-line"></div>
+        <h1>nama:-</h1>
+        <h1>Nama Perusahaan:-</h1>
+          <H1>Produk Yang di Pesan</H1>
+        <h1>Tanggal Pembelian:-</h1>
+        </div>
+      </div>
+    </section>-->
 
     <!-- Contact Section -->
     <section id="contact" class="reveal">
@@ -877,7 +960,7 @@
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
       
-      // Animasi ikon hamburger menjadi X (opsional, visual)
+      // Animasi ikon hamburger menjadi X
       const bars = document.querySelectorAll('.bar');
       if (nav.classList.contains('active')) {
         bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
