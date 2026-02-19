@@ -9,9 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -61,12 +59,9 @@
             /* Transition */
             --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        *,
-        *::before,
-        *::after {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -85,10 +80,7 @@
         }
 
         /* Typography */
-        h1,
-        h2,
-        h3,
-        h4 {
+        h1, h2, h3, h4 {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
             line-height: 1.2;
@@ -100,39 +92,8 @@
 
         /* Animations */
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.7;
-            }
-        }
-
-        @keyframes slide-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
 
         .reveal {
@@ -146,23 +107,12 @@
             transform: translateY(0);
         }
 
-        .stagger-1 {
-            transition-delay: 0.1s;
-        }
-
-        .stagger-2 {
-            transition-delay: 0.2s;
-        }
-
-        .stagger-3 {
-            transition-delay: 0.3s;
-        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
 
         @media (prefers-reduced-motion: reduce) {
-
-            *,
-            *::before,
-            *::after {
+            *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important;
             }
@@ -219,13 +169,8 @@
             color: var(--text-primary);
         }
 
-        .brand-logo-text .txt-black {
-            color: var(--logo-blue);
-        }
-
-        .brand-logo-text .txt-red {
-            color: var(--logo-red);
-        }
+        .brand-logo-text .txt-black { color: var(--logo-blue); }
+        .brand-logo-text .txt-red { color: var(--logo-red); }
 
         .brand-tagline {
             font-size: 0.75rem;
@@ -274,15 +219,13 @@
             transition: var(--transition-fast);
         }
 
-        .nav-item-mobile:hover,
-        .nav-item-mobile.active {
+        .nav-item-mobile:hover, .nav-item-mobile.active {
             background: var(--bg-primary);
             color: var(--primary);
             box-shadow: var(--shadow-sm);
         }
 
-        .nav-item-mobile:hover i,
-        .nav-item-mobile.active i {
+        .nav-item-mobile:hover i, .nav-item-mobile.active i {
             opacity: 1;
         }
 
@@ -349,10 +292,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top,
-                    rgba(0, 0, 0, 0.85) 0%,
-                    rgba(0, 0, 0, 0.4) 35%,
-                    transparent 70%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 35%, transparent 70%);
             z-index: 1;
         }
 
@@ -433,13 +373,8 @@
             transform: translateY(-50%) scale(0.95);
         }
 
-        .nav-btn.prev {
-            left: 20px;
-        }
-
-        .nav-btn.next {
-            right: 20px;
-        }
+        .nav-btn.prev { left: 20px; }
+        .nav-btn.next { right: 20px; }
 
         .nav-btn svg {
             width: 20px;
@@ -535,13 +470,8 @@
             transition: width 0.3s ease;
         }
 
-        .dot:hover::after {
-            width: 30%;
-        }
-
-        .dot.active::after {
-            width: 100%;
-        }
+        .dot:hover::after { width: 30%; }
+        .dot.active::after { width: 100%; }
 
         .thumbnails {
             display: flex;
@@ -640,15 +570,6 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        .btn-accent {
-            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
-            box-shadow: var(--shadow-accent);
-        }
-
-        .btn-accent:hover {
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
-        }
-
         /* Sections */
         main {
             position: relative;
@@ -658,6 +579,11 @@
             padding: 80px 24px;
             max-width: 1400px;
             margin: 0 auto;
+        }
+
+        /* Fix for sticky header covering content on scroll */
+        section[id] {
+            scroll-margin-top: 100px;
         }
 
         .section-header {
@@ -687,19 +613,6 @@
             background: linear-gradient(90deg, var(--accent), var(--accent-dark));
             margin: 12px auto 0;
             border-radius: 2px;
-        }
-
-        .section-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 100px;
-            color: var(--primary);
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
         }
 
         /* About Section */
@@ -837,6 +750,13 @@
             background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
             width: 100%;
             max-width: 100%;
+            padding: 80px 0;
+        }
+
+        .bg-products section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
         .product-grid {
@@ -921,14 +841,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-        .form-section h3 {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
-
         .form-group {
             margin-bottom: 20px;
         }
@@ -941,8 +853,7 @@
             margin-bottom: 8px;
         }
 
-        .form-group input,
-        .form-group textarea {
+        .form-group input, .form-group textarea {
             width: 100%;
             padding: 14px 18px;
             background: var(--bg-secondary);
@@ -954,16 +865,10 @@
             transition: var(--transition-fast);
         }
 
-        .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--text-muted);
         }
 
         .form-group textarea {
@@ -1055,8 +960,7 @@
             margin-bottom: 4px;
         }
 
-        .contact-details p,
-        .contact-details a {
+        .contact-details p, .contact-details a {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
@@ -1094,13 +998,7 @@
         }
 
         /* Focus States */
-        .btn:focus-visible,
-        .nav-btn:focus-visible,
-        .dot:focus-visible,
-        .thumb:focus-visible,
-        .play-pause:focus-visible,
-        .nav-item-mobile:focus-visible,
-        .btn-submit:focus-visible {
+        .btn:focus-visible, .nav-btn:focus-visible, .dot:focus-visible, .thumb:focus-visible, .play-pause:focus-visible, .nav-item-mobile:focus-visible, .btn-submit:focus-visible {
             outline: 2px solid var(--primary);
             outline-offset: 2px;
         }
@@ -1187,16 +1085,19 @@
                 height: 44px;
             }
 
-            .nav-btn.prev {
-                left: 10px;
-            }
-
-            .nav-btn.next {
-                right: 10px;
-            }
+            .nav-btn.prev { left: 10px; }
+            .nav-btn.next { right: 10px; }
 
             section {
                 padding: 60px 16px;
+            }
+            
+            /* Fix for bg-products section padding on mobile */
+            .bg-products {
+                padding: 60px 0;
+            }
+            .bg-products section {
+                padding: 0 16px;
             }
 
             .about-intro {
@@ -1260,16 +1161,11 @@
         <nav id="navbar">
             <div class="nav-container">
                 <ul class="nav-list">
-                    <li><a href="#about" class="nav-item-mobile"><i class="fas fa-home"></i><span>Tentang
-                                Kami</span></a></li>
-                    <li><a href="#products" class="nav-item-mobile"><i class="fas fa-boxes-stacked"></i><span>Daftar
-                                Produk</span></a></li>
-                    <li><a href="#services" class="nav-item-mobile"><i class="fas fa-fire-flame-curved"></i><span>Produk
-                                Unggulan</span></a></li>
-                    <li><a href="#laporan" class="nav-item-mobile"><i
-                                class="fas fa-clipboard"></i><span>Laporan</span></a></li>
-                    <li><a href="#contact" class="nav-item-mobile"><i
-                                class="fas fa-envelope"></i><span>Kontak</span></a></li>
+                    <li><a href="#about" class="nav-item-mobile"><i class="fas fa-home"></i><span>Tentang Kami</span></a></li>
+                    <li><a href="#products" class="nav-item-mobile"><i class="fas fa-boxes-stacked"></i><span>Daftar Produk</span></a></li>
+                    <li><a href="#services" class="nav-item-mobile"><i class="fas fa-fire-flame-curved"></i><span>Produk Unggulan</span></a></li>
+                    <li><a href="#laporan" class="nav-item-mobile"><i class="fas fa-clipboard"></i><span>Laporan</span></a></li>
+                    <li><a href="#contact" class="nav-item-mobile"><i class="fas fa-envelope"></i><span>Kontak</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -1287,8 +1183,7 @@
                         <rect x="6" y="4" width="4" height="16" rx="1" />
                         <rect x="14" y="4" width="4" height="16" rx="1" />
                     </svg>
-                    <svg id="playIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        style="display: none;">
+                    <svg id="playIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
                         <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                 </button>
@@ -1319,588 +1214,575 @@
             </div>
 
             <div class="about-intro reveal">
-                <p><strong>PT. Agape Olivia Sukses</strong> bergerak dalam penyediaan heater element, mesin-mesin yang
-                    didukung oleh heater element, serta alat-alat teknik yang berhubungan dengan heater element part.
-                </p>
-                <p>Dalam menjalankan usaha ini, kami sangat berkomitmen mengedepankan mutu (kualitas) dan ketepatan
-                    waktu (on time) serta keramahan dan etika dalam melayani seluruh customer.</p>
-                <p>Kami juga terus berbenah diri dan siap berkompetisi dengan perusahaan-perusahaan lokal baik dari segi
-                    kompetensi dan juga kepuasan pelanggan.</p>
+                <p><strong>PT. Agape Olivia Sukses</strong> bergerak dalam penyediaan heater element, mesin-mesin yang didukung oleh heater element, serta alat-alat teknik yang berhubungan dengan heater element part.</p>
+                <p>Dalam menjalankan usaha ini, kami sangat berkomitmen mengedepankan mutu (kualitas) dan ketepatan waktu (on time) serta keramahan dan etika dalam melayani seluruh customer.</p>
+                <p>Kami juga terus berbenah diri dan siap berkompetisi dengan perusahaan-perusahaan lokal baik dari segi kompetensi dan juga kepuasan pelanggan.</p>
             </div>
         </section>
 
-        <section id="products" class="bg-products">
-            <div class="section-header reveal">
-                <h2>Daftar Produk</h2>
-                <div class="separator-line"></div>
-            </div>
+        <!-- Products List Section -->
+        <div class="bg-products">
+            <section id="products">
+                <div class="section-header reveal">
+                    <h2>Daftar Produk</h2>
+                    <div class="separator-line"></div>
+                </div>
 
-            <div class="catalog-card reveal stagger-1">
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Katalog Spare Part</h3>
-                <ul class="catalog-list">
-                    <li onclick="scrollKeProduk('Immersion Heater')">Immersion Heater</li>
-                    <li onclick="scrollKeProduk('Silicon Nitride')">Silicon Nitride</li>
-                    <li onclick="scrollKeProduk('Infrared Black Body')">Infrared Black Body</li>
-                    <li onclick="scrollKeProduk('Cartridge Heater')">Cartridge Heater</li>
-                    <li onclick="scrollKeProduk('Tubular Heater')">Tubular Heater</li>
-                    <li onclick="scrollKeProduk('Silica Quartz Heater')">Silica Quartz Heater</li>
-                    <li onclick="scrollKeProduk('Thermocouple Control')">Thermocouple Control</li>
-                    <li onclick="scrollKeProduk('Band Heater')">Band Heater</li>
-                    <li onclick="scrollKeProduk('Ceramic Heater')">Ceramic Heater</li>
-                    <li onclick="scrollKeProduk('Cast In Heater')">Cast In Heater</li>
-                    <li onclick="scrollKeProduk('Coil Heater')">Coil Heater</li>
-                    <li onclick="scrollKeProduk('Flat Strip Heater')">Flat/Strip Heater</li>
-                    <li onclick="scrollKeProduk('Finned Heater')">Finned Heater</li>
-                </ul>
-            </div>
+                <!-- Added wrapper about-grid to fix layout -->
+                <div class="about-grid">
+                    <div class="catalog-card reveal stagger-1">
+                        <h3><i class="fa-solid fa-screwdriver-wrench"></i> Katalog Spare Part</h3>
+                        <ul class="catalog-list">
+                            <li onclick="scrollKeProduk('Immersion Heater')">Immersion Heater</li>
+                            <li onclick="scrollKeProduk('Silicon Nitride')">Silicon Nitride</li>
+                            <li onclick="scrollKeProduk('Infrared Black Body')">Infrared Black Body</li>
+                            <li onclick="scrollKeProduk('Cartridge Heater')">Cartridge Heater</li>
+                            <li onclick="scrollKeProduk('Tubular Heater')">Tubular Heater</li>
+                            <li onclick="scrollKeProduk('Silica Quartz Heater')">Silica Quartz Heater</li>
+                            <li onclick="scrollKeProduk('Thermocouple Control')">Thermocouple Control</li>
+                            <li onclick="scrollKeProduk('Band Heater')">Band Heater</li>
+                            <li onclick="scrollKeProduk('Ceramic Heater')">Ceramic Heater</li>
+                            <li onclick="scrollKeProduk('Cast In Heater')">Cast In Heater</li>
+                            <li onclick="scrollKeProduk('Coil Heater')">Coil Heater</li>
+                            <li onclick="scrollKeProduk('Flat Strip Heater')">Flat/Strip Heater</li>
+                            <li onclick="scrollKeProduk('Finned Heater')">Finned Heater</li>
+                        </ul>
+                    </div>
 
-            <div class="catalog-card reveal stagger-2">
-                <h3><i class="fa-solid fa-industry"></i> Katalog Mesin Industri</h3>
-                <ul class="catalog-list">
-                    <li onclick="scrollKeProduk('Oven Circulation')">Oven Circulation</li>
-                    <li onclick="scrollKeProduk('Oven Furnace')">Oven Furnace</li>
-                    <li onclick="scrollKeProduk('Electric Duct Heater')">Electric Duct Heater</li>
-                    <li onclick="scrollKeProduk('Load Bank')">Load Bank</li>
-                    <li onclick="scrollKeProduk('Hot Room Instalation')">Hot Room Installation</li>
-                    <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
-                    <li onclick="scrollKeProduk('Oven Boiler')">Oven Boiler/Hot Tank</li>
-                    <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
-                    <li onclick="scrollKeProduk('heating container')">Heating Container</li>
-                    <li onclick="scrollKeProduk('Tubular Incoloy')">Tubular Incoloy</li>
-                    <li onclick="scrollKeProduk('Thermocouple')">Thermocouple</li>
-                </ul>
-            </div>
-            </div>
-        </section>
+                    <div class="catalog-card reveal stagger-2">
+                        <h3><i class="fa-solid fa-industry"></i> Katalog Mesin Industri</h3>
+                        <ul class="catalog-list">
+                            <li onclick="scrollKeProduk('Oven Circulation')">Oven Circulation</li>
+                            <li onclick="scrollKeProduk('Oven Furnace')">Oven Furnace</li>
+                            <li onclick="scrollKeProduk('Electric Duct Heater')">Electric Duct Heater</li>
+                            <li onclick="scrollKeProduk('Load Bank')">Load Bank</li>
+                            <li onclick="scrollKeProduk('Hot Room Instalation')">Hot Room Installation</li>
+                            <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
+                            <li onclick="scrollKeProduk('Oven Boiler')">Oven Boiler/Hot Tank</li>
+                            <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
+                            <li onclick="scrollKeProduk('heating container')">Heating Container</li>
+                            <li onclick="scrollKeProduk('Tubular Incoloy')">Tubular Incoloy</li>
+                            <li onclick="scrollKeProduk('Thermocouple')">Thermocouple</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-        <!-- Products Section -->
-
-        <div class="bg-gray">
-            <section id="services" style="padding-left: 0; padding-right: 0;">
-                <div class="section-header reveal" style="padding: 0 20px;">
+        <!-- Services / Product Cards Section -->
+        <div class="bg-products" style="background: var(--bg-secondary);">
+            <section id="services">
+                <div class="section-header reveal">
                     <h2>Produk Unggulan</h2>
                     <div class="separator-line"></div>
                 </div>
 
                 <div class="product-grid">
-                    <!-- Product cards remain the same, abbreviated for space -->
-                     <!-- Card 1: Band Heater -->
-          <div id="Band Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/kufa54.jpg" alt="Band Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Band Heater</h3>
-              <h4>1. Industri Plastik dan Karet</h4>
-              <p>Dalam industri plastik dan karet, band heater digunakan untuk memanaskan mesin cetak atau ekstrusi.</p>
-              <h4>2. Industri Pengolahan Makanan</h4>
-              <p>Band heater dapat digunakan dalam industri pengolahan makanan untuk memanaskan tangki atau wadah.</p>
-              <h4>3. Industri Kimia</h4>
-              <p>Dalam industri kimia, band heater dapat digunakan untuk memanaskan tangki atau reaktor.</p>
-            </div>
-          </div>
+                    <!-- Card 1: Band Heater -->
+                    <div id="Band Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/kufa54.jpg" alt="Band Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Band Heater</h3>
+                            <h4>1. Industri Plastik dan Karet</h4>
+                            <p>Dalam industri plastik dan karet, band heater digunakan untuk memanaskan mesin cetak atau ekstrusi.</p>
+                            <h4>2. Industri Pengolahan Makanan</h4>
+                            <p>Band heater dapat digunakan dalam industri pengolahan makanan untuk memanaskan tangki atau wadah.</p>
+                            <h4>3. Industri Kimia</h4>
+                            <p>Dalam industri kimia, band heater dapat digunakan untuk memanaskan tangki atau reaktor.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 2: Cartridge Heater -->
-          <div id="Cartridge Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/cblcmn.jpg" alt="Cartridge Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Cartridge Heater</h3>
-              <h4>1. Selubung Baja Tahan Karat</h4>
-              <p>Lapisan luar pemanas kartrid biasanya terbuat dari baja tahan karat yang tahan korosi.</p>
-              <h4>2. Isolasi Magnesium Oksida (MgO)</h4>
-              <p>Kumparan pemanas dikemas rapat dengan bubuk MgO kemurnian tinggi di dalam selubungnya.</p>
-              <h4>3. Kawat Resistansi Nikel-Kromium</h4>
-              <p>Elemen pemanas inti terbuat dari kawat NiCr, yang dipilih karena ketahanan suhunya yang tinggi.</p>
-            </div>
-          </div>
+                    <!-- Card 2: Cartridge Heater -->
+                    <div id="Cartridge Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/cblcmn.jpg" alt="Cartridge Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cartridge Heater</h3>
+                            <h4>1. Selubung Baja Tahan Karat</h4>
+                            <p>Lapisan luar pemanas kartrid biasanya terbuat dari baja tahan karat yang tahan korosi.</p>
+                            <h4>2. Isolasi Magnesium Oksida (MgO)</h4>
+                            <p>Kumparan pemanas dikemas rapat dengan bubuk MgO kemurnian tinggi di dalam selubungnya.</p>
+                            <h4>3. Kawat Resistansi Nikel-Kromium</h4>
+                            <p>Elemen pemanas inti terbuat dari kawat NiCr, yang dipilih karena ketahanan suhunya yang tinggi.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 3: Tubular Heater -->
-          <div id="Tubular Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/zyla7r.jpg" alt="Tubular Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Tubular Heater</h3>
-              <p>Tubular heater adalah jenis elemen pemanas yang dirancang dalam bentuk tabung atau silinder.</p>
-              <h4>1. Pemanasan Cairan dan Gas</h4>
-              <p>Digunakan untuk memanaskan cairan atau gas dalam berbagai aplikasi industri.</p>
-              <h4>2. Pemanasan Dalam Mesin Industri</h4>
-              <p>Sering digunakan dalam oven, pengering, peralatan pengolahan makanan.</p>
-              <h4>3. Pemanasan Udara</h4>
-              <p>Dapat digunakan untuk memanaskan udara sebelum didistribusikan dalam sistem pemanas udara.</p>
-            </div>
-          </div>
+                    <!-- Card 3: Tubular Heater -->
+                    <div id="Tubular Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/zyla7r.jpg" alt="Tubular Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Tubular Heater</h3>
+                            <p>Tubular heater adalah jenis elemen pemanas yang dirancang dalam bentuk tabung atau silinder.</p>
+                            <h4>1. Pemanasan Cairan dan Gas</h4>
+                            <p>Digunakan untuk memanaskan cairan atau gas dalam berbagai aplikasi industri.</p>
+                            <h4>2. Pemanasan Dalam Mesin Industri</h4>
+                            <p>Sering digunakan dalam oven, pengering, peralatan pengolahan makanan.</p>
+                            <h4>3. Pemanasan Udara</h4>
+                            <p>Dapat digunakan untuk memanaskan udara sebelum didistribusikan dalam sistem pemanas udara.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 4: Immersion Heater -->
-          <div id="Immersion Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/3v948e.jpg" alt="Immersion Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Immersion Heater</h3>
-              <h4>1. Efisiensi Pemanasan</h4>
-              <p>Immersion heater dapat menghasilkan panas dengan cepat dan efisien.</p>
-              <h4>2. Kontrol Suhu</h4>
-              <p>Alat ini memungkinkan pengaturan suhu yang tepat.</p>
-              <h4>3. Fleksibilitas</h4>
-              <p>Dapat digunakan dalam berbagai jenis cairan atau gas.</p>
-            </div>
-          </div>
+                    <!-- Card 4: Immersion Heater -->
+                    <div id="Immersion Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/3v948e.jpg" alt="Immersion Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Immersion Heater</h3>
+                            <h4>1. Efisiensi Pemanasan</h4>
+                            <p>Immersion heater dapat menghasilkan panas dengan cepat dan efisien.</p>
+                            <h4>2. Kontrol Suhu</h4>
+                            <p>Alat ini memungkinkan pengaturan suhu yang tepat.</p>
+                            <h4>3. Fleksibilitas</h4>
+                            <p>Dapat digunakan dalam berbagai jenis cairan atau gas.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 5: Cast In Heater -->
-          <div id="Cast In Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/lb5mi4.jpg" alt="Cast In Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Cast In Heater</h3>
-              <h4>1. Industri Plastik dan Karet</h4>
-              <p>Cast in heater sering digunakan dalam mesin injeksi plastik atau ekstruder.</p>
-              <h4>2. Industri Kimia</h4>
-              <p>Digunakan dalam industri kimia untuk memanaskan tangki reaksi atau pipa.</p>
-              <h4>3. Industri Pengecoran Logam</h4>
-              <p>Dapat digunakan untuk memanaskan cetakan atau alat cetak untuk melelehkan logam.</p>
-            </div>
-          </div>
+                    <!-- Card 5: Cast In Heater -->
+                    <div id="Cast In Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/lb5mi4.jpg" alt="Cast In Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cast In Heater</h3>
+                            <h4>1. Industri Plastik dan Karet</h4>
+                            <p>Cast in heater sering digunakan dalam mesin injeksi plastik atau ekstruder.</p>
+                            <h4>2. Industri Kimia</h4>
+                            <p>Digunakan dalam industri kimia untuk memanaskan tangki reaksi atau pipa.</p>
+                            <h4>3. Industri Pengecoran Logam</h4>
+                            <p>Dapat digunakan untuk memanaskan cetakan atau alat cetak untuk melelehkan logam.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 6: Finned Heater (Mapped from Bobin Heater) -->
-          <div id="Finned Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/bbg69s.jpg" alt="Finned/Bobin Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Finned/Bobin Heater</h3>
-              <h4>1. Desain & Material</h4>
-              <p>Terdiri dari elemen keramik tahan panas yang menopang kawat resistensi.</p>
-              <h4>2. Aplikasi Pemanasan</h4>
-              <p>Digunakan untuk memanaskan tangki besar, tangki minyak bakar berat, dan cairan kimia.</p>
-              <h4>3. Pemasangan</h4>
-              <p>Umumnya dipasang secara horizontal, tetapi bisa didesain untuk instalasi vertikal.</p>
-            </div>
-          </div>
+                    <!-- Card 6: Finned Heater -->
+                    <div id="Finned Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/bbg69s.jpg" alt="Finned/Bobin Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Finned/Bobin Heater</h3>
+                            <h4>1. Desain & Material</h4>
+                            <p>Terdiri dari elemen keramik tahan panas yang menopang kawat resistensi.</p>
+                            <h4>2. Aplikasi Pemanasan</h4>
+                            <p>Digunakan untuk memanaskan tangki besar, tangki minyak bakar berat, dan cairan kimia.</p>
+                            <h4>3. Pemasangan</h4>
+                            <p>Umumnya dipasang secara horizontal, tetapi bisa didesain untuk instalasi vertikal.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 7: Ceramic Infra Red Heater -->
-          <div id="Ceramic Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/1mazhv.jpg" alt="Ceramic Infra Red Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Ceramic Infra Red Heater</h3>
-              <h4>1. Fungsi Pemanasan</h4>
-              <p>Dimanfaatkan untuk memanaskan sifat benda yang permukaannya padat (drying, baking, kain, dll).</p>
-              <h4>2. Proses Pemanasan</h4>
-              <p>Dapat dipasang dalam baris atau bank untuk mencapai intens panas terkonsentrasi.</p>
-              <h4>3. Suhu Tinggi</h4>
-              <p>Dirancang untuk suhu operasi sampai 750° C dengan permukaan panas hingga 64 kW/m².</p>
-            </div>
-          </div>
+                    <!-- Card 7: Ceramic Infra Red Heater -->
+                    <div id="Ceramic Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/1mazhv.jpg" alt="Ceramic Infra Red Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ceramic Infra Red Heater</h3>
+                            <h4>1. Fungsi Pemanasan</h4>
+                            <p>Dimanfaatkan untuk memanaskan sifat benda yang permukaannya padat (drying, baking, kain, dll).</p>
+                            <h4>2. Proses Pemanasan</h4>
+                            <p>Dapat dipasang dalam baris atau bank untuk mencapai intens panas terkonsentrasi.</p>
+                            <h4>3. Suhu Tinggi</h4>
+                            <p>Dirancang untuk suhu operasi sampai 750° C dengan permukaan panas hingga 64 kW/m².</p>
+                        </div>
+                    </div>
 
-          <!-- Card 8: Thermocouple Control -->
-          <div id="Thermocouple Control" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/fibemg.jpg" alt="Thermocouple Control" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Thermocouple Control</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Memantau, mengukur, dan mengendalikan suhu secara real-time dalam proses industri.</p>
-              <h4>2. Cara Kerja</h4>
-              <p>Sensor mendeteksi suhu, sinyal dikirim ke kontroler, dan kontroler mengatur pemanas.</p>
-              <h4>3. Keamanan</h4>
-              <p>Berfungsi sebagai pengaman yang menutup aliran gas/energi jika suhu tidak normal.</p>
-            </div>
-          </div>
+                    <!-- Card 8: Thermocouple Control -->
+                    <div id="Thermocouple Control" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/fibemg.jpg" alt="Thermocouple Control" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Thermocouple Control</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Memantau, mengukur, dan mengendalikan suhu secara real-time dalam proses industri.</p>
+                            <h4>2. Cara Kerja</h4>
+                            <p>Sensor mendeteksi suhu, sinyal dikirim ke kontroler, dan kontroler mengatur pemanas.</p>
+                            <h4>3. Keamanan</h4>
+                            <p>Berfungsi sebagai pengaman yang menutup aliran gas/energi jika suhu tidak normal.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 9: Infrared Black Body -->
-          <div id="Infrared Black Body" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/195jkz.jpg" alt="Infrared Black Body" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Infrared Black Body</h3>
-              <h4>1. Fungsi</h4>
-              <p>Menjana haba inframerah jauh untuk pemanasan ruang atau terapi haba.</p>
-              <h4>2. Aplikasi</h4>
-              <p>Digunakan dalam pemanas sauna, industri, dan peranti pemanas rumah.</p>
-              <h4>3. Bahan</h4>
-              <p>Diperbuat daripada bahan seramik berkualiti tinggi atau kuarza dengan dawai nikel-kromium.</p>
-            </div>
-          </div>
+                    <!-- Card 9: Infrared Black Body -->
+                    <div id="Infrared Black Body" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/195jkz.jpg" alt="Infrared Black Body" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Infrared Black Body</h3>
+                            <h4>1. Fungsi</h4>
+                            <p>Menjana haba inframerah jauh untuk pemanasan ruang atau terapi haba.</p>
+                            <h4>2. Aplikasi</h4>
+                            <p>Digunakan dalam pemanas sauna, industri, dan peranti pemanas rumah.</p>
+                            <h4>3. Bahan</h4>
+                            <p>Diperbuat daripada bahan seramik berkualiti tinggi atau kuarza dengan dawai nikel-kromium.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 10: Silicon Nitride -->
-          <div id="Silicon Nitride" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/z3l4qp.jpg" alt="Silicon Nitride" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Silicon Nitride</h3>
-              <h4>1. Sifat Mekanik & Termal</h4>
-              <p>Sangat keras, memiliki kekuatan lentur tinggi, dan ketangguhan patah yang tinggi.</p>
-              <h4>2. Ketahanan Kimia</h4>
-              <p>Umumnya inert secara kimiawi, namun dapat diserang oleh asam fluorida (HF) encer.</p>
-              <h4>3. Elektronik</h4>
-              <p>Substrat khusus, lapisan pasivasi dalam fabrikasi semikonduktor.</p>
-            </div>
-          </div>
+                    <!-- Card 10: Silicon Nitride -->
+                    <div id="Silicon Nitride" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/z3l4qp.jpg" alt="Silicon Nitride" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Silicon Nitride</h3>
+                            <h4>1. Sifat Mekanik & Termal</h4>
+                            <p>Sangat keras, memiliki kekuatan lentur tinggi, dan ketangguhan patah yang tinggi.</p>
+                            <h4>2. Ketahanan Kimia</h4>
+                            <p>Umumnya inert secara kimiawi, namun dapat diserang oleh asam fluorida (HF) encer.</p>
+                            <h4>3. Elektronik</h4>
+                            <p>Substrat khusus, lapisan pasivasi dalam fabrikasi semikonduktor.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 11: Flat/Strip Heater -->
-          <div id="Flat Strip Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/356ja8.jpg" alt="Plat/Strip Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Plat/Strip Heater</h3>
-              <h4>1. Penggunaan</h4>
-              <p>Sering ditempelkan pada die, moulds, atau tangki untuk menjaga suhu.</p>
-              <h4>2. Desain</h4>
-              <p>Umumnya terbuat dari plat logam (seperti aluminium atau besi) yang membungkus elemen resistansi.</p>
-              <h4>3. Keunggulan</h4>
-              <p>Presisi, efisien dalam perpindahan panas, dan hemat energi.</p>
-            </div>
-          </div>
+                    <!-- Card 11: Flat/Strip Heater -->
+                    <div id="Flat Strip Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/356ja8.jpg" alt="Plat/Strip Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Plat/Strip Heater</h3>
+                            <h4>1. Penggunaan</h4>
+                            <p>Sering ditempelkan pada die, moulds, atau tangki untuk menjaga suhu.</p>
+                            <h4>2. Desain</h4>
+                            <p>Umumnya terbuat dari plat logam (seperti aluminium atau besi) yang membungkus elemen resistansi.</p>
+                            <h4>3. Keunggulan</h4>
+                            <p>Presisi, efisien dalam perpindahan panas, dan hemat energi.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 12: Manifold Heater -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/cvfart.jpg" alt="Manifold Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Manifold Heater</h3>
-              <h4>1. Aplikasi Industri</h4>
-              <p>Menjaga suhu material plastik tetap ideal dalam sistem hot runner.</p>
-              <h4>2. Jenis-jenis</h4>
-              <p>Biasanya berbentuk pemanas tubular fleksibel atau stainless steel.</p>
-              <h4>3. Efisiensi</h4>
-              <p>Meminimalkan limbah bahan dengan mencegah pembekuan plastik.</p>
-            </div>
-          </div>
+                    <!-- Card 12: Manifold Heater -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/cvfart.jpg" alt="Manifold Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Manifold Heater</h3>
+                            <h4>1. Aplikasi Industri</h4>
+                            <p>Menjaga suhu material plastik tetap ideal dalam sistem hot runner.</p>
+                            <h4>2. Jenis-jenis</h4>
+                            <p>Biasanya berbentuk pemanas tubular fleksibel atau stainless steel.</p>
+                            <h4>3. Efisiensi</h4>
+                            <p>Meminimalkan limbah bahan dengan mencegah pembekuan plastik.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 13: Oven Traksi Motor -->
-          <div id="Oven Circulation" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/ru6ofl.jpg" alt="Oven Traksi Motor" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Oven Traksi Motor</h3>
-              <h4>1. Kipas Sirkulasi</h4>
-              <p>Kipas aliran aksial sering digunakan untuk meratakan udara panas.</p>
-              <h4>2. Suhu Seragam</h4>
-              <p>Sering digunakan di industri untuk pengeringan farmasi, bahan kimia, atau makanan.</p>
-              <h4>3. Fitur Spesifik</h4>
-              <p>Dilengkapi kontrol suhu presisi tinggi dan sirkulasi udara paksa.</p>
-            </div>
-          </div>
+                    <!-- Card 13: Oven Circulation -->
+                    <div id="Oven Circulation" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/ru6ofl.jpg" alt="Oven Traksi Motor" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Oven Traksi Motor</h3>
+                            <h4>1. Kipas Sirkulasi</h4>
+                            <p>Kipas aliran aksial sering digunakan untuk meratakan udara panas.</p>
+                            <h4>2. Suhu Seragam</h4>
+                            <p>Sering digunakan di industri untuk pengeringan farmasi, bahan kimia, atau makanan.</p>
+                            <h4>3. Fitur Spesifik</h4>
+                            <p>Dilengkapi kontrol suhu presisi tinggi dan sirkulasi udara paksa.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 14: Ceramic Furnice -->
-          <div id="Oven Furnace" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/2bs0vd.jpg" alt="Ceramic Furnice" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Ceramic Furnace</h3>
-              <h4>1. Material</h4>
-              <p>Menggunakan serat keramik ringan untuk isolasi efisien.</p>
-              <h4>2. Aplikasi</h4>
-              <p>Digunakan untuk analisis gravimetrik, penentuan kadar abu, dan sintering.</p>
-              <h4>3. Konstruksi</h4>
-              <p>Umumnya berbentuk box-type, elemen pemanas terlindung dalam muffle.</p>
-            </div>
-          </div>
+                    <!-- Card 14: Ceramic Furnace -->
+                    <div id="Oven Furnace" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/2bs0vd.jpg" alt="Ceramic Furnice" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ceramic Furnace</h3>
+                            <h4>1. Material</h4>
+                            <p>Menggunakan serat keramik ringan untuk isolasi efisien.</p>
+                            <h4>2. Aplikasi</h4>
+                            <p>Digunakan untuk analisis gravimetrik, penentuan kadar abu, dan sintering.</p>
+                            <h4>3. Konstruksi</h4>
+                            <p>Umumnya berbentuk box-type, elemen pemanas terlindung dalam muffle.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 15: Carbottom Furnice -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/0lm0tq.jpg" alt="Carbottom Furnice" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Carbottom Furnace</h3>
-              <h4>1. Desain Bogie Hearth</h4>
-              <p>Lantai tungku dipasang di atas kereta beroda yang dapat ditarik keluar.</p>
-              <h4>2. Penggunaan Industri</h4>
-              <p>Efisien untuk menangani komponen logam raksasa yang sulit dimuat.</p>
-              <h4>3. Suhu</h4>
-              <p>Mampu mencapai suhu tinggi sesuai kebutuhan proses.</p>
-            </div>
-          </div>
+                    <!-- Card 15: Carbottom Furnace -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/0lm0tq.jpg" alt="Carbottom Furnice" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Carbottom Furnace</h3>
+                            <h4>1. Desain Bogie Hearth</h4>
+                            <p>Lantai tungku dipasang di atas kereta beroda yang dapat ditarik keluar.</p>
+                            <h4>2. Penggunaan Industri</h4>
+                            <p>Efisien untuk menangani komponen logam raksasa yang sulit dimuat.</p>
+                            <h4>3. Suhu</h4>
+                            <p>Mampu mencapai suhu tinggi sesuai kebutuhan proses.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 16: Load Bank -->
-          <div id="Load Bank" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/6vhcib.jpg" alt="Load Bank" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Load Bank</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Digunakan untuk commissioning, pemeliharaan berkala, dan uji performa genset.</p>
-              <h4>2. Cara Kerja</h4>
-              <p>Menciptakan beban buatan untuk membebani sumber daya dan menghilangkan energi listrik.</p>
-            </div>
-          </div>
+                    <!-- Card 16: Load Bank -->
+                    <div id="Load Bank" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/6vhcib.jpg" alt="Load Bank" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Load Bank</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Digunakan untuk commissioning, pemeliharaan berkala, dan uji performa genset.</p>
+                            <h4>2. Cara Kerja</h4>
+                            <p>Menciptakan beban buatan untuk membebani sumber daya dan menghilangkan energi listrik.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 17: Ceramic Heater (Duplicate?) mapped to existing Ceramic if needed, or specialized -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/qqj2ko.jpg" alt="Ceramic Heater Type 2" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Ceramic Heater Element</h3>
-              <h4>1. Pemanasan Cepat</h4>
-              <p>Keramik menyerap dan melepaskan panas dengan cepat.</p>
-              <h4>2. Aman dan Tahan Lama</h4>
-              <p>Tidak mudah menua, tidak mudah terbakar, dan tahan korosi.</p>
-              <h4>3. Efisien</h4>
-              <p>Menghasilkan panas langsung tanpa perlu waktu lama.</p>
-            </div>
-          </div>
+                    <!-- Card 17: Ceramic Heater Element -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/qqj2ko.jpg" alt="Ceramic Heater Type 2" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Ceramic Heater Element</h3>
+                            <h4>1. Pemanasan Cepat</h4>
+                            <p>Keramik menyerap dan melepaskan panas dengan cepat.</p>
+                            <h4>2. Aman dan Tahan Lama</h4>
+                            <p>Tidak mudah menua, tidak mudah terbakar, dan tahan korosi.</p>
+                            <h4>3. Efisien</h4>
+                            <p>Menghasilkan panas langsung tanpa perlu waktu lama.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 18: Silicone Carbide -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/r9vp52.jpg" alt="Silicone Carbide" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Silicone Carbide</h3>
-              <h4>1. Ketahanan Suhu</h4>
-              <p>Mampu beroperasi pada suhu dan tegangan tinggi.</p>
-              <h4>2. Aplikasi Industri</h4>
-              <p>Digunakan untuk rem mobil, kopling, pelat anti peluru, dan sandblasting.</p>
-              <h4>3. Jenis</h4>
-              <p>Terdiri dari varian hitam (lebih keras) dan hijau untuk pemrosesan kaca.</p>
-            </div>
-          </div>
+                    <!-- Card 18: Silicone Carbide -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/r9vp52.jpg" alt="Silicone Carbide" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Silicone Carbide</h3>
+                            <h4>1. Ketahanan Suhu</h4>
+                            <p>Mampu beroperasi pada suhu dan tegangan tinggi.</p>
+                            <h4>2. Aplikasi Industri</h4>
+                            <p>Digunakan untuk rem mobil, kopling, pelat anti peluru, dan sandblasting.</p>
+                            <h4>3. Jenis</h4>
+                            <p>Terdiri dari varian hitam (lebih keras) dan hijau untuk pemrosesan kaca.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 19: Oven Conveyor -->
-          <div id="Oven Conveyor" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/fv2w3e.jpg" alt="Oven Conveyor" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Oven Conveyor</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Memanggang, mengeringkan, atau memanaskan material secara berkelanjutan.</p>
-              <h4>2. Keunggulan</h4>
-              <p>Efisiensi tinggi, konsistensi hasil, dan cocok untuk volume besar.</p>
-              <h4>3. Jenis</h4>
-              <p>Terdapat jenis gas dan listrik dengan suhu yang dapat disesuaikan.</p>
-            </div>
-          </div>
+                    <!-- Card 19: Oven Conveyor -->
+                    <div id="Oven Conveyor" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/fv2w3e.jpg" alt="Oven Conveyor" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Oven Conveyor</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Memanggang, mengeringkan, atau memanaskan material secara berkelanjutan.</p>
+                            <h4>2. Keunggulan</h4>
+                            <p>Efisiensi tinggi, konsistensi hasil, dan cocok untuk volume besar.</p>
+                            <h4>3. Jenis</h4>
+                            <p>Terdapat jenis gas dan listrik dengan suhu yang dapat disesuaikan.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 20: Oven Furnace (Duplicate ID warning, skipped ID to avoid conflict, just display) -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/kyth5q.jpg" alt="Oven Furnace General" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Oven Furnace (General)</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Digunakan untuk melebur logam, pengerasan logam, dan sintering.</p>
-              <h4>2. Sumber Energi</h4>
-              <p>Menggunakan gas alam, bahan bakar cair, batu bara, atau listrik.</p>
-              <h4>3. Jenis-jenis</h4>
-              <p>Box furnace, muffle furnace, dan tube furnace.</p>
-            </div>
-          </div>
+                    <!-- Card 20: Oven Furnace General -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/kyth5q.jpg" alt="Oven Furnace General" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Oven Furnace (General)</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Digunakan untuk melebur logam, pengerasan logam, dan sintering.</p>
+                            <h4>2. Sumber Energi</h4>
+                            <p>Menggunakan gas alam, bahan bakar cair, batu bara, atau listrik.</p>
+                            <h4>3. Jenis-jenis</h4>
+                            <p>Box furnace, muffle furnace, dan tube furnace.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 21: Holding Furnace -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/7iz7u1.jpg" alt="Holding Furnace" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Holding Furnace</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Menahan suhu logam cair tetap stabil, bukan melebur bahan padat.</p>
-              <h4>2. Keunggulan</h4>
-              <p>Kontrol suhu akurat, mengurangi turbulensi, dan umur operasional panjang.</p>
-              <h4>3. Komponen</h4>
-              <p>Dilengkapi dengan sistem degassing untuk menghilangkan gas.</p>
-            </div>
-          </div>
+                    <!-- Card 21: Holding Furnace -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/7iz7u1.jpg" alt="Holding Furnace" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Holding Furnace</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Menahan suhu logam cair tetap stabil, bukan melebur bahan padat.</p>
+                            <h4>2. Keunggulan</h4>
+                            <p>Kontrol suhu akurat, mengurangi turbulensi, dan umur operasional panjang.</p>
+                            <h4>3. Komponen</h4>
+                            <p>Dilengkapi dengan sistem degassing untuk menghilangkan gas.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 22: Heat Exchangers -->
-          <div id="Heat Exchangers" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/f13quz.jpg" alt="Heat Exchangers" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Heat Exchangers</h3>
-              <h4>1. Shell and Tube</h4>
-              <p>Terdiri dari kumpulan pipa di dalam sebuah tabung besar.</p>
-              <h4>2. Plate and Frame</h4>
-              <p>Menggunakan pelat-pelat tipis untuk mentransfer panas dengan cepat.</p>
-              <h4>3. Double Pipe</h4>
-              <p>Tipe paling sederhana dengan dua pipa paralel bersarang.</p>
-            </div>
-          </div>
+                    <!-- Card 22: Heat Exchangers -->
+                    <div id="Heat Exchangers" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/f13quz.jpg" alt="Heat Exchangers" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Heat Exchangers</h3>
+                            <h4>1. Shell and Tube</h4>
+                            <p>Terdiri dari kumpulan pipa di dalam sebuah tabung besar.</p>
+                            <h4>2. Plate and Frame</h4>
+                            <p>Menggunakan pelat-pelat tipis untuk mentransfer panas dengan cepat.</p>
+                            <h4>3. Double Pipe</h4>
+                            <p>Tipe paling sederhana dengan dua pipa paralel bersarang.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 23: Tank Heater -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/j2iqme.jpg" alt="Tank Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Tank Heater</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Memanaskan atau menjaga suhu fluida di dalam tangki penampung.</p>
-              <h4>2. Menjaga Viskositas</h4>
-              <p>Memastikan cairan kental tetap encer agar mudah dipompa.</p>
-              <h4>3. Mencegah Pembekuan</h4>
-              <p>Melindungi isi tangki agar tidak membeku pada cuaca ekstrem.</p>
-            </div>
-          </div>
+                    <!-- Card 23: Tank Heater -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/j2iqme.jpg" alt="Tank Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Tank Heater</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Memanaskan atau menjaga suhu fluida di dalam tangki penampung.</p>
+                            <h4>2. Menjaga Viskositas</h4>
+                            <p>Memastikan cairan kental tetap encer agar mudah dipompa.</p>
+                            <h4>3. Mencegah Pembekuan</h4>
+                            <p>Melindungi isi tangki agar tidak membeku pada cuaca ekstrem.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 24: Cable Heater -->
-          <div class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/7p3wfe.jpg" alt="Cable Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Cable Heater</h3>
-              <h4>1. Ketahanan Panas Tinggi</h4>
-              <p>Isolasi terbuat dari material seperti fiberglass dengan lapisan mika.</p>
-              <h4>2. Fungsi</h4>
-              <p>Industri logam, mesin cetak, dan aplikasi pemanasan fleksibel.</p>
-              <h4>3. Material Konduktor</h4>
-              <p>Menggunakan tembaga lapis nikel atau nikel murni.</p>
-            </div>
-          </div>
+                    <!-- Card 24: Cable Heater -->
+                    <div class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/7p3wfe.jpg" alt="Cable Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cable Heater</h3>
+                            <h4>1. Ketahanan Panas Tinggi</h4>
+                            <p>Isolasi terbuat dari material seperti fiberglass dengan lapisan mika.</p>
+                            <h4>2. Fungsi</h4>
+                            <p>Industri logam, mesin cetak, dan aplikasi pemanasan fleksibel.</p>
+                            <h4>3. Material Konduktor</h4>
+                            <p>Menggunakan tembaga lapis nikel atau nikel murni.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 25: Coil Heater / Hot Runner -->
-          <div id="Coil Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/bntfg4.jpg" alt="Hot Runner/coil Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Hot Runner/Coil Heater</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Mencegah plastik membeku di dalam saluran runner.</p>
-              <h4>2. Karakteristik</h4>
-              <p>Fleksibel, tahan lama, berdensitas tinggi, dan efisien.</p>
-              <h4>3. Fitur Tambahan</h4>
-              <p>Dilengkapi dengan termokopel terintegrasi untuk kontrol suhu presisi.</p>
-            </div>
-          </div>
+                    <!-- Card 25: Coil Heater / Hot Runner -->
+                    <div id="Coil Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/bntfg4.jpg" alt="Hot Runner/coil Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Hot Runner/Coil Heater</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Mencegah plastik membeku di dalam saluran runner.</p>
+                            <h4>2. Karakteristik</h4>
+                            <p>Fleksibel, tahan lama, berdensitas tinggi, dan efisien.</p>
+                            <h4>3. Fitur Tambahan</h4>
+                            <p>Dilengkapi dengan termokopel terintegrasi untuk kontrol suhu presisi.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 26: Electric Duct Heater -->
-          <div id="Electric Duct Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/tzz7qs.jpg" alt="Electric Duct Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Electric Duct Heater</h3>
-              <h4>1. Cara Kerja</h4>
-              <p>Udara dingin yang melewati ducting dipanaskan oleh elemen pemanas.</p>
-              <h4>2. Keunggulan</h4>
-              <p>Menjaga stabilitas suhu ruangan dan efisien.</p>
-              <h4>3. Komponen & Material</h4>
-              <p>Dirancang dengan elemen pemanas listrik dan material stainless steel.</p>
-            </div>
-          </div>
-          
-          <!-- Card 27: Silica Quartz Heater -->
-          <div id="Silica Quartz Heater" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/7m1187.jpeg" alt="Silica Quartz Heater" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Silica Quartz Heater</h3>
-              <h4>1. Fungsi Utama</h4>
-              <p>Digunakan untuk memanaskan air, larutan kimia, dan cairan industri.</p>
-              <h4>2. Jenis</h4>
-              <p>Tersedia dalam tipe celup dan tipe tabung untuk pemanasan inframerah.</p>
-              <h4>3. Material</h4>
-              <p>Tabung kaca silika/kuarsa berkualitas tinggi yang tahan kejutan termal.</p>
-            </div>
-          </div>
+                    <!-- Card 26: Electric Duct Heater -->
+                    <div id="Electric Duct Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/tzz7qs.jpg" alt="Electric Duct Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Electric Duct Heater</h3>
+                            <h4>1. Cara Kerja</h4>
+                            <p>Udara dingin yang melewati ducting dipanaskan oleh elemen pemanas.</p>
+                            <h4>2. Keunggulan</h4>
+                            <p>Menjaga stabilitas suhu ruangan dan efisien.</p>
+                            <h4>3. Komponen & Material</h4>
+                            <p>Dirancang dengan elemen pemanas listrik dan material stainless steel.</p>
+                        </div>
+                    </div>
 
-          <!-- Card 28: Oven Boiler/Hot Tank -->
-          <div id="Oven Boiler/Hot Tank" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/5wsr3p.jpg" alt="Oven Boiler/Hot Tank" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Oven Boiler/Hot Tank</h3>
-              <h4>1. Elemen Pemanas</h4>
-              <p>Pemanas elektrik atau penukar panas untuk menaikkan suhu air.</p>
-              <h4>2. Sistem Sirkulasi</h4>
-              <p>Memompa air panas ke jaringan pipa produksi.</p>
-              <h4>3. Tangki Ekspansi</h4>
-              <p>Mencegah air mendidih berlebihan dan mengelola tekanan.</p>
-            </div>
-          </div>
-          <!-- Card 29: heating container -->
-          <div id="heating container" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="heating container" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>heating container</h3>
-              <h4>1. Sistem</h4>
-              <p>Dilengkapi dengan alat pemanas aktif yang memungkinkan pengguna mengatur suhu di dalam kontainer sesuai kebutuhan.</p>
-              <h4>2. Isolasi Termal</h4>
-              <p>Dinding, atap, dan lantai dilengkapi lapisan isolasi tebal untuk mencegah perpindahan panas dari luar ke dalam atau sebaliknya, memastikan suhu tetap terjaga.</p>
-              <h4>3. Tujuan</h4>
-              <p> Digunakan untuk mengangkut barang yang memerlukan suhu terkontrol, seperti produk farmasi, bahan kimia, atau bahan biologis yang sensitif terhadap suhu rendah. </p>
-            </div>
-          </div>
-          <!-- Card 30: Tubular Incoloy -->
-          <div id="Tubular Incoloy" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/dv99lm.jpg" alt="Tubular Incoloy" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Tubular Incoloy</h3>
-              <h4>1. Efisiensi Perpindahan Panas</h4>
-              <p>Material ini memungkinkan perpindahan panas yang sangat baik, meningkatkan efisiensi alat pemanas.</p>
-              <h4>2. Ekonomis</h4>
-              <p>Dengan kandungan nikel di bawah 50%, Incoloy memberikan alternatif yang lebih terjangkau dibandingkan Inconel, namun tetap menawarkan kinerja tinggi.</p>
-              <h4>3. Ketahanan Korosi Superior</h4>
-              <p>Sangat tahan terhadap korosi asam, retak tegang, dan sumuran, menjadikannya ideal untuk lingkungan agresif. </p>
-            </div>
-          </div>
-            <!-- Card 31: Tubular Incoloy -->
-          <div id="Tubular Incoloy" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/dv99lm.jpg" alt="Tubular Incoloy" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Tubular Incoloy</h3>
-              <h4>1. Efisiensi Perpindahan Panas</h4>
-              <p>Material ini memungkinkan perpindahan panas yang sangat baik, meningkatkan efisiensi alat pemanas.</p>
-              <h4>2. Ekonomis</h4>
-              <p>Dengan kandungan nikel di bawah 50%, Incoloy memberikan alternatif yang lebih terjangkau dibandingkan Inconel, namun tetap menawarkan kinerja tinggi.</p>
-              <h4>3. Ketahanan Korosi Superior</h4>
-              <p>Sangat tahan terhadap korosi asam, retak tegang, dan sumuran, menjadikannya ideal untuk lingkungan agresif. </p>
-            </div>
-          </div>
-           <!-- Card 32: Thermocouple -->
-          <div id="Thermocouple" class="product-card reveal">
-            <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/r32ma3.jpg" alt="Thermocouple" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Thermocouple</h3>
-              <h4>1. Efek Seebeck</h4>
-              <p> Ketika dua logam berbeda disambungkan dan terdapat perbedaan suhu antara ujung panas dan ujung dingin, perbedaan potensial listrik (tegangan) dihasilkan.</p>
-              <h4>2. Komponen</h4>
-              <p>Terdiri dari dua kawat logam yang disebut termoelemen (positif dan negatif).</p>
-              <h4>3. Jenis</h4>
-              <p>Tipe umum meliputi K, J, T, E (logam dasar) serta R, S, B (logam mulia) untuk suhu tinggi.</p>
-          </div>
+                    <!-- Card 27: Silica Quartz Heater -->
+                    <div id="Silica Quartz Heater" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/7m1187.jpeg" alt="Silica Quartz Heater" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Silica Quartz Heater</h3>
+                            <h4>1. Fungsi Utama</h4>
+                            <p>Digunakan untuk memanaskan air, larutan kimia, dan cairan industri.</p>
+                            <h4>2. Jenis</h4>
+                            <p>Tersedia dalam tipe celup dan tipe tabung untuk pemanasan inframerah.</p>
+                            <h4>3. Material</h4>
+                            <p>Tabung kaca silika/kuarsa berkualitas tinggi yang tahan kejutan termal.</p>
+                        </div>
+                    </div>
 
+                    <!-- Card 28: Oven Boiler/Hot Tank -->
+                    <div id="Oven Boiler/Hot Tank" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/5wsr3p.jpg" alt="Oven Boiler/Hot Tank" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Oven Boiler/Hot Tank</h3>
+                            <h4>1. Elemen Pemanas</h4>
+                            <p>Pemanas elektrik atau penukar panas untuk menaikkan suhu air.</p>
+                            <h4>2. Sistem Sirkulasi</h4>
+                            <p>Memompa air panas ke jaringan pipa produksi.</p>
+                            <h4>3. Tangki Ekspansi</h4>
+                            <p>Mencegah air mendidih berlebihan dan mengelola tekanan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 29: Heating Container -->
+                    <div id="heating container" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="heating container" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Heating Container</h3>
+                            <h4>1. Sistem</h4>
+                            <p>Dilengkapi dengan alat pemanas aktif yang memungkinkan pengguna mengatur suhu di dalam kontainer sesuai kebutuhan.</p>
+                            <h4>2. Isolasi Termal</h4>
+                            <p>Dinding, atap, dan lantai dilengkapi lapisan isolasi tebal untuk mencegah perpindahan panas dari luar ke dalam atau sebaliknya.</p>
+                            <h4>3. Tujuan</h4>
+                            <p>Digunakan untuk mengangkut barang yang memerlukan suhu terkontrol, seperti produk farmasi, bahan kimia, atau bahan biologis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 30: Tubular Incoloy -->
+                    <div id="Tubular Incoloy" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/dv99lm.jpg" alt="Tubular Incoloy" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Tubular Incoloy</h3>
+                            <h4>1. Efisiensi Perpindahan Panas</h4>
+                            <p>Material ini memungkinkan perpindahan panas yang sangat baik, meningkatkan efisiensi alat pemanas.</p>
+                            <h4>2. Ekonomis</h4>
+                            <p>Dengan kandungan nikel di bawah 50%, Incoloy memberikan alternatif yang lebih terjangkau dibandingkan Inconel.</p>
+                            <h4>3. Ketahanan Korosi Superior</h4>
+                            <p>Sangat tahan terhadap korosi asam, retak tegang, dan sumuran.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 32: Thermocouple -->
+                    <div id="Thermocouple" class="product-card reveal">
+                        <div class="card-img-wrapper">
+                            <img src="https://files.catbox.moe/r32ma3.jpg" alt="Thermocouple" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3>Thermocouple</h3>
+                            <h4>1. Efek Seebeck</h4>
+                            <p>Ketika dua logam berbeda disambungkan dan terdapat perbedaan suhu antara ujung panas dan ujung dingin, perbedaan potensial listrik (tegangan) dihasilkan.</p>
+                            <h4>2. Komponen</h4>
+                            <p>Terdiri dari dua kawat logam yang disebut termoelemen (positif dan negatif).</p>
+                            <h4>3. Jenis</h4>
+                            <p>Tipe umum meliputi K, J, T, E (logam dasar) serta R, S, B (logam mulia) untuk suhu tinggi.</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
-        </div>
+
 
         <!-- Form Section -->
         <section id="laporan">
             <div class="section-header reveal">
                 <h2>Konsultasi</h2>
                 <div class="separator-line"></div>
-                <p style="margin-top: 16px;">Kirimkan pertanyaan atau permintaan penawaran Anda melalui formulir di
-                    bawah</p>
+                <p style="margin-top: 16px;">Kirimkan pertanyaan atau permintaan penawaran Anda melalui formulir di bawah</p>
             </div>
 
             <div class="form-section reveal">
@@ -1910,8 +1792,7 @@
                 </div>
                 <div class="form-group">
                     <label for="isi">Pesan / Pertanyaan</label>
-                    <textarea id="isi" rows="5"
-                        placeholder="Tuliskan pertanyaan atau permintaan Anda di sini"></textarea>
+                    <textarea id="isi" rows="5" placeholder="Tuliskan pertanyaan atau permintaan Anda di sini"></textarea>
                 </div>
                 <button class="btn-submit" onclick="kirimLaporan()">
                     <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>
@@ -1948,23 +1829,17 @@
                         <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-details">
                             <h4>Alamat Kantor</h4>
-                            <p>Perum. Mayang Pratama Blok E10 No.23, Kel. Mustikasari, Kec. Mustika Jaya, Kota Bekasi,
-                                Jawa Barat 17157</p>
+                            <p>Perum. Mayang Pratama Blok E10 No.23, Kel. Mustikasari, Kec. Mustika Jaya, Kota Bekasi, Jawa Barat 17157</p>
                         </div>
                     </div>
                     <div class="button-group">
-                        <a href="mailto:agape.oliviasukses@gmail.com" class="btn btn-secondary"><i
-                                class="fa-solid fa-paper-plane"></i> Kirim Email</a>
-                        <button class="btn btn-whatsapp" onclick="kirimWhatsApp()"><i class="fa-brands fa-whatsapp"></i>
-                            WhatsApp</button>
+                        <a href="mailto:agape.oliviasukses@gmail.com" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i> Kirim Email</a>
+                        <button class="btn btn-whatsapp" onclick="kirimWhatsApp()"><i class="fa-brands fa-whatsapp"></i> WhatsApp</button>
                     </div>
                 </div>
                 <div class="contact-map-col">
                     <div class="map-container">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Perumahan%20Mayang%20Pratama%20Blok%20E10%20No.23,%20Mustikasari,%20Kec.%20Mustika%20Jaya,%20Kota%20Bekasi,%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi PT. Agape Olivia Sukses"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=Perumahan%20Mayang%20Pratama%20Blok%20E10%20No.23,%20Mustikasari,%20Kec.%20Mustika%20Jaya,%20Kota%20Bekasi,%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Lokasi PT. Agape Olivia Sukses"></iframe>
                     </div>
                 </div>
             </div>
@@ -1985,8 +1860,6 @@
             { image: 'https://files.catbox.moe/w67qjc.jpg', tag: 'Immersion Heater', title: 'Immersion Heater Efisien', desc: 'Pemanas celup dengan kontrol suhu tepat dan fleksibilitas tinggi untuk berbagai aplikasi industri.' },
             { image: 'https://files.catbox.moe/zyla7r.jpg', tag: 'Tubular Heater', title: 'Tubular Heater Serbaguna', desc: 'Elemen pemanas tabung untuk pemanasan cairan, gas, dan udara dalam berbagai aplikasi industri.' }
         ];
-
-        
 
         // ========== SLIDER STATE ==========
         let currentIndex = 0;
@@ -2124,24 +1997,6 @@
             else if (e.key === ' ') { e.preventDefault(); togglePlayPause(); }
         }
 
-        // ========== PRODUCTS ==========
-        function initProducts() {
-            const grid = document.getElementById('productGrid');
-            if (!grid) return;
-            products.forEach((p, i) => {
-                const card = document.createElement('div');
-                card.id = p.id;
-                card.className = 'product-card reveal';
-                card.style.transitionDelay = `${(i % 6) * 0.1}s`;
-                let pointsHTML = p.points.map(pt => `<h4>${pt.t}</h4><p>${pt.d}</p>`).join('');
-                card.innerHTML = `
-                    <div class="card-img-wrapper"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
-                    <div class="card-content"><h3>${p.title}</h3>${pointsHTML}</div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
         // ========== MOBILE MENU ==========
         function initMobileMenu() {
             const menuToggle = document.getElementById('mobile-menu');
@@ -2210,7 +2065,7 @@
         // ========== INITIALIZE ==========
         document.addEventListener('DOMContentLoaded', () => {
             initSlider();
-            initProducts();
+            // initProducts() is removed because products are hardcoded in HTML
             initMobileMenu();
             initScrollReveal();
         });
