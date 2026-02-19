@@ -298,7 +298,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(
+            background: -webkit-linear-gradient(
                 to top,
                 rgba(10, 10, 15, 0.9) 0%,
                 rgba(10, 10, 15, 0.3) 30%,
@@ -327,7 +327,10 @@
         .slide-tag {
             display: inline-block;
             padding: 6px 14px;
-            background: var(--slider-accent);
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(17px);
             color: var(--bg-dark);
             font-size: 12px;
             font-weight: 600;
@@ -342,14 +345,17 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 12px;
-            color: var(--bg-white);
+            color: #000000 ;
+            
         }
 
         .slide-desc {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgb(0, 0, 0);
             font-size: 14px;
             max-width: 400px;
             line-height: 1.6;
+            font-size: 1.2rem;
+             font-weight: 600;
         }
 
         /* Slider Navigation Buttons */
@@ -359,9 +365,7 @@
             transform: translateY(-50%);
             width: 56px;
             height: 56px;
-            background: rgba(15, 15, 20, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
+            border: 2px solid var(--border-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -373,7 +377,7 @@
         }
 
         .nav-btn:hover {
-            background: var(--slider-accent);
+            background: #fff;
             border-color: var(--slider-accent);
             color: var(--bg-dark);
             transform: translateY(-50%) scale(1.1);
@@ -384,7 +388,10 @@
             transform: translateY(-50%) scale(0.95);
         }
 
-        .nav-btn.prev { left: 20px; }
+        .nav-btn.prev {
+             left: 20px;
+             font-size: 1rem ;
+             }
         .nav-btn.next { right: 20px; }
 
         .nav-btn svg {
@@ -1070,6 +1077,62 @@ background: var(--bg-white);
             outline: 2px solid var(--slider-accent);
             outline-offset: 2px;
         }
+
+       .form-container {
+      background: transparent;
+      border: 2px solid rgba(0, 0, 0, 0.705);
+      border-radius: 20px;
+      backdrop-filter: blur(17px);
+      border-radius: 10px;
+      padding: 60px;
+      max-width: 100%;
+      margin: 40px auto;
+      font-size: 1.2rem;
+    }
+
+    .form-container:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.589);
+      transform: translateY(-8px);
+      transition: all 0.8s ease-out;
+    }
+
+    .form-container label {
+      display: block;
+      margin-top: 11px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 20px;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+      font-size: 1.5rem;
+      height: auto ;
+      box-sizing: border-box;
+    }
+
+    
+    button {
+      background: linear-gradient( to right, rgba(58, 58, 189, 0.9) ,rgba(39, 233, 155, 0.74));
+      color: white;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover { 
+
+        background: linear-gradient( to right, #00a634, #3032a3);
+      
+            transform: translateY(-3px);
+            transition: all 0.8s ease-out;
+
+     }
+
     </style>
 </head>
 
@@ -1113,6 +1176,12 @@ background: var(--bg-white);
                         <a href="#services" class="nav-item-mobile">
                             <i class="fas fa-fire-flame-curved"></i>
                             <span>Produk Unggulan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#laporan" class="nav-item-mobile"> 
+                            <i class="fas fa-clipboard"></i>
+                            <span>laporan</span>
                         </a>
                     </li>
                     <li>
@@ -1226,6 +1295,9 @@ background: var(--bg-white);
                         <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
                         <li onclick="scrollKeProduk('Oven Boiler/Hot Tank')">Oven Boiler/Hot Tank</li>
                         <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
+                        <li onclick="scrollKeProduk('heating container')">heating container</li>
+                        <li onclick="scrollKeProduk('Tubular Incoloy')">Tubular Incoloy</li>
+                        <li onclick="scrollKeProduk('Thermocouple')">Thermocouple</li>
                     </ul>
                 </div>
             </div>
@@ -1260,7 +1332,7 @@ background: var(--bg-white);
           <!-- Card 2: Cartridge Heater -->
           <div id="Cartridge Heater" class="product-card reveal">
             <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/8aq9a7.jpg" alt="Cartridge Heater" loading="lazy">
+              <img src="https://files.catbox.moe/cblcmn.jpg" alt="Cartridge Heater" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Cartridge Heater</h3>
@@ -1293,7 +1365,7 @@ background: var(--bg-white);
           <!-- Card 4: Immersion Heater -->
           <div id="Immersion Heater" class="product-card reveal">
             <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/5rfcpb.png" alt="Immersion Heater" loading="lazy">
+              <img src="https://files.catbox.moe/3v948e.jpg" alt="Immersion Heater" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Immersion Heater</h3>
@@ -1659,7 +1731,7 @@ background: var(--bg-white);
           <!-- Card 27: Silica Quartz Heater -->
           <div id="Silica Quartz Heater" class="product-card reveal">
             <div class="card-img-wrapper">
-              <img src="https://files.catbox.moe/ephiwu.jpg" alt="Silica Quartz Heater" loading="lazy">
+              <img src="https://files.catbox.moe/7m1187.jpeg" alt="Silica Quartz Heater" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Silica Quartz Heater</h3>
@@ -1673,7 +1745,7 @@ background: var(--bg-white);
           </div>
 
           <!-- Card 28: Oven Boiler/Hot Tank -->
-          <div id="Oven Boiler Hot Tank" class="product-card reveal">
+          <div id="Oven Boiler/Hot Tank" class="product-card reveal">
             <div class="card-img-wrapper">
               <img src="https://files.catbox.moe/5wsr3p.jpg" alt="Oven Boiler/Hot Tank" loading="lazy">
             </div>
@@ -1687,10 +1759,89 @@ background: var(--bg-white);
               <p>Mencegah air mendidih berlebihan dan mengelola tekanan.</p>
             </div>
           </div>
+          <!-- Card 29: heating container -->
+          <div id="heating container" class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="heating container" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>heating container</h3>
+              <h4>1. Sistem</h4>
+              <p>Dilengkapi dengan alat pemanas aktif yang memungkinkan pengguna mengatur suhu di dalam kontainer sesuai kebutuhan.</p>
+              <h4>2. Isolasi Termal</h4>
+              <p>Dinding, atap, dan lantai dilengkapi lapisan isolasi tebal untuk mencegah perpindahan panas dari luar ke dalam atau sebaliknya, memastikan suhu tetap terjaga.</p>
+              <h4>3. Tujuan</h4>
+              <p> Digunakan untuk mengangkut barang yang memerlukan suhu terkontrol, seperti produk farmasi, bahan kimia, atau bahan biologis yang sensitif terhadap suhu rendah. </p>
+            </div>
+          </div>
+          <!-- Card 30: Tubular Incoloy -->
+          <div id="Tubular Incoloy" class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/dv99lm.jpg" alt="Tubular Incoloy" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Tubular Incoloy</h3>
+              <h4>1. Efisiensi Perpindahan Panas</h4>
+              <p>Material ini memungkinkan perpindahan panas yang sangat baik, meningkatkan efisiensi alat pemanas.</p>
+              <h4>2. Ekonomis</h4>
+              <p>Dengan kandungan nikel di bawah 50%, Incoloy memberikan alternatif yang lebih terjangkau dibandingkan Inconel, namun tetap menawarkan kinerja tinggi.</p>
+              <h4>3. Ketahanan Korosi Superior</h4>
+              <p>Sangat tahan terhadap korosi asam, retak tegang, dan sumuran, menjadikannya ideal untuk lingkungan agresif. </p>
+            </div>
+          </div>
+            <!-- Card 31: Tubular Incoloy -->
+          <div id="Tubular Incoloy" class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/dv99lm.jpg" alt="Tubular Incoloy" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Tubular Incoloy</h3>
+              <h4>1. Efisiensi Perpindahan Panas</h4>
+              <p>Material ini memungkinkan perpindahan panas yang sangat baik, meningkatkan efisiensi alat pemanas.</p>
+              <h4>2. Ekonomis</h4>
+              <p>Dengan kandungan nikel di bawah 50%, Incoloy memberikan alternatif yang lebih terjangkau dibandingkan Inconel, namun tetap menawarkan kinerja tinggi.</p>
+              <h4>3. Ketahanan Korosi Superior</h4>
+              <p>Sangat tahan terhadap korosi asam, retak tegang, dan sumuran, menjadikannya ideal untuk lingkungan agresif. </p>
+            </div>
+          </div>
+           <!-- Card 32: Thermocouple -->
+          <div id="Thermocouple" class="product-card reveal">
+            <div class="card-img-wrapper">
+              <img src="https://files.catbox.moe/r32ma3.jpg" alt="Thermocouple" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Thermocouple</h3>
+              <h4>1. Efek Seebeck</h4>
+              <p> Ketika dua logam berbeda disambungkan dan terdapat perbedaan suhu antara ujung panas dan ujung dingin, perbedaan potensial listrik (tegangan) dihasilkan.</p>
+              <h4>2. Komponen</h4>
+              <p>Terdiri dari dua kawat logam yang disebut termoelemen (positif dan negatif).</p>
+              <h4>3. Jenis</h4>
+              <p>Tipe umum meliputi K, J, T, E (logam dasar) serta R, S, B (logam mulia) untuk suhu tinggi.</p>
+          </div>
 
             </section>
         </div>
 
+        <section id="laporan">
+             <div id="laporan" class="tab-content">
+                 <div class="section-header">
+                <h3>Permintaan anda dapat dikirimkan melaui WhatsApp kami dengan melalui formulir di bawah.</h3>
+                <div class="separator-line"></div>
+            </div>
+
+      <h2 style="text-align:center; color:#dab08ece;">Formulir Laporan</h2>
+      <div class="form-container">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama Anda">
+        
+        <label for="isi">Isi Laporan:</label>
+        <textarea id="isi" rows="5" placeholder="Tuliskan Pertanyaan Anda di sini"></textarea>
+
+        <button onclick="kirimLaporan()">Kirim Laporan ke WhatsApp</button>
+      </div>
+    </div>
+        </section>
+        
         <!-- Contact Section -->
         <section id="contact" class="reveal">
             <div class="section-header">
@@ -2055,6 +2206,21 @@ const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
             initMobileMenu();
             initScrollReveal();
         });
+
+          function kirimLaporan() {
+      const nama = document.getElementById("nama").value;
+      const isi = document.getElementById("isi").value;
+
+      if (!nama || !isi) {
+        alert("Nama dan isi laporan harus diisi!");
+        return;
+      }
+
+      const pesan = `Halo, saya *${nama}* ingin melaporkan:\n\n${isi}`;
+      const url = `https://wa.me/${nomorTelepon}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    }
+
     </script>
 </body>
 
