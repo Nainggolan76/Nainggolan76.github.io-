@@ -7,52 +7,69 @@
     <title>PT. AGAPE OLIVIA SUKSES - Spesialis Heater Industri</title>
     <meta name="description" content="Spesialis Heater Element & Sistem Pemanas Industri terbaik dan terpercaya.">
 
-    <!-- Font Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ========== CSS VARIABLES ========== */
         :root {
             /* Brand Colors */
-            --primary-color: #2563eb;
-            --primary-dark: #1e40af;
-            --secondary-color: #1f2937;
-            --accent-color: #f59e0b;
-            --red-logo: #dc2626;
-            --black-logo: #180082;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
 
-            /* Netral & Background */
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --bg-dark: #0a0a0f;
-            --text-dark: #111827;
-            --text-gray: #4b5563;
-            --text-muted: #6b6b7a;
-            --border-color: #e5e7eb;
-            --card-bg: #15151f;
+            /* Accent Colors */
+            --accent: #f59e0b;
+            --accent-dark: #d97706;
+            --accent-light: #fbbf24;
 
-            /* Efek */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Logo Colors */
+            --logo-red: #dc2626;
+            --logo-blue: #180082;
 
-            /* Slider specific */
-            --slider-accent: #3032a3;
-            --slider-accent-glow: rgba(0, 85, 212, 0.719);
+            /* Background */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+
+            /* Text */
+            --text-primary: #111827;
+            --text-secondary: #374151;
+            --text-muted: #6b7280;
+
+            /* Border & Shadow */
+            --border-light: #e5e7eb;
+            --border-medium: #d1d5db;
+
+            /* Effects */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-primary: 0 4px 14px rgba(37, 99, 235, 0.25);
+            --shadow-accent: 0 4px 14px rgba(245, 158, 11, 0.25);
+
+            /* Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+
+            /* Transition */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        /* ========== RESET & BASE ========== */
         *,
         *::before,
         *::after {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html {
@@ -61,48 +78,67 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-light);
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        h1, h2, h3, h4, p {
-            margin-top: 0;
-        }
-
-        p {
-            text-align: justify;
+        /* Typography */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
         }
 
         .font-display {
-            font-family: 'Syne', sans-serif;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* ========== ANIMATION UTILITIES ========== */
+        /* Animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .reveal.active {
@@ -110,40 +146,42 @@
             transform: translateY(0);
         }
 
-        @keyframes fadeSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
+
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
+
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
             }
         }
 
-        .animate-entrance {
-            animation: fadeSlideUp 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-            opacity: 0;
-        }
-
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-
-        /* ========== HEADER & NAVIGATION ========== */
+        /* Header */
         header {
-            background-color: var(--bg-white);
-            box-shadow: var(--shadow-sm);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            transition: var(--transition);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .header-top {
-            max-width: 1200px;
-            margin: auto;
-            padding: 15px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 16px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -152,159 +190,170 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
             cursor: pointer;
+            text-decoration: none;
         }
 
         .brand-img {
-            max-height: 70px;
+            height: 56px;
             width: auto;
-            object-fit: contain;
+            transition: var(--transition-smooth);
+        }
+
+        .brand:hover .brand-img {
+            transform: scale(1.05);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
         }
 
         .brand-logo-text {
-            font-size: 1.9rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            line-height: 1.1;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
             letter-spacing: -0.5px;
+            color: var(--text-primary);
+        }
+
+        .brand-logo-text .txt-black {
+            color: var(--logo-blue);
+        }
+
+        .brand-logo-text .txt-red {
+            color: var(--logo-red);
         }
 
         .brand-tagline {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-top: 4px;
+            font-size: 0.75rem;
+            color: var(--primary);
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
-
-        .txt-black { color: var(--black-logo); }
-        .txt-blue { color: var(--primary-color); }
-        .txt-red { color: var(--red-logo); }
 
         /* Navigation */
         nav {
-            background-color: var(--bg-white);
-            width: 100%;
-            border-top: 1px solid var(--border-color);
+            background: var(--bg-tertiary);
+            border-top: 1px solid var(--border-light);
         }
 
         .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
         .nav-list {
             display: flex;
-            gap: 40px;
+            justify-content: center;
+            gap: 8px;
             padding: 12px 0;
+            list-style: none;
         }
 
         .nav-item-mobile {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding: 8px 19px;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: var(--transition);
-            white-space: nowrap;
+            gap: 8px;
+            padding: 10px 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+            text-decoration: none;
         }
 
         .nav-item-mobile i {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-            color: var(--primary-color);
+            font-size: 1rem;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: var(--transition-fast);
         }
 
         .nav-item-mobile:hover,
         .nav-item-mobile.active {
-            background: var(--bg-light);
-            color: var(--primary-color);
+            background: var(--bg-primary);
+            color: var(--primary);
             box-shadow: var(--shadow-sm);
-            transform: translateY(-2px);
         }
 
-        /* Hamburger Menu */
+        .nav-item-mobile:hover i,
+        .nav-item-mobile.active i {
+            opacity: 1;
+        }
+
         .menu-toggle {
             display: none;
             flex-direction: column;
-            cursor: pointer;
             gap: 5px;
+            cursor: pointer;
+            padding: 8px;
             z-index: 1002;
         }
 
         .bar {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-dark);
-            transition: 0.3s;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: var(--transition-fast);
         }
 
-        /* ========== HERO SLIDER ========== */
+        /* Hero Slider */
         .hero-section {
             position: relative;
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 32px 24px;
         }
 
         .slider-wrapper {
             position: relative;
             width: 100%;
             aspect-ratio: 16/9;
-            border-radius: 20px;
+            border-radius: var(--radius-xl);
             overflow: hidden;
-            background: var(--card-bg);
-            box-shadow: 
-                0 0 0 1px var(--border-color),
-                0 30px 60px -20px rgba(0, 0, 0, 0.5),
-                0 0 100px -30px var(--slider-accent-glow);
+            background: #1f2937;
+            box-shadow: var(--shadow-xl);
         }
 
         .slider-track {
             display: flex;
             height: 100%;
-            transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .slide {
             flex: 0 0 100%;
             height: 100%;
             position: relative;
-            overflow: hidden;
         }
 
         .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+            transition: transform 8s ease-out;
         }
 
         .slide.active img {
-            transform: scale(1);
+            transform: scale(1.05);
         }
 
-        .slide:not(.active) img {
-            transform: scale(1.1);
-        }
-
-        .slide::after {
+        .slide::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: -webkit-linear-gradient(
-                to top,
-                rgba(10, 10, 15, 0.9) 0%,
-                rgba(10, 10, 15, 0.3) 30%,
-                transparent 60%
-            );
-            pointer-events: none;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.85) 0%,
+                    rgba(0, 0, 0, 0.4) 35%,
+                    transparent 70%);
+            z-index: 1;
         }
 
         .slide-content {
@@ -312,11 +361,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 40px;
+            padding: 48px;
             z-index: 2;
-            transform: translateY(20px);
+            transform: translateY(30px);
             opacity: 0;
-            transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
         }
 
         .slide.active .slide-content {
@@ -326,62 +375,58 @@
 
         .slide-tag {
             display: inline-block;
-            padding: 6px 14px;
-            background: transparent;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 20px;
-            backdrop-filter: blur(17px);
-            color: var(--bg-dark);
-            font-size: 12px;
+            padding: 6px 16px;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            border-radius: 100px;
+            color: #60a5fa;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 4px;
             margin-bottom: 16px;
         }
 
         .slide-title {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 800;
-            line-height: 1.2;
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
             margin-bottom: 12px;
-            color: #000000 ;
-            
+            color: #ffffff;
+            max-width: 600px;
         }
 
         .slide-desc {
-            color: rgb(0, 0, 0);
-            font-size: 14px;
-            max-width: 400px;
-            line-height: 1.6;
-            font-size: 1.2rem;
-             font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            max-width: 500px;
+            line-height: 1.7;
         }
 
-        /* Slider Navigation Buttons */
+        /* Slider Controls */
         .nav-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 56px;
-            height: 56px;
-            border: 2px solid var(--border-color);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
             z-index: 10;
-            color: var(--bg-white);
+            color: #ffffff;
+            transition: var(--transition-fast);
         }
 
         .nav-btn:hover {
-            background: #fff;
-            border-color: var(--slider-accent);
-            color: var(--bg-dark);
+            background: var(--primary);
+            border-color: var(--primary);
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 0 30px var(--slider-accent-glow);
+            box-shadow: var(--shadow-primary);
         }
 
         .nav-btn:active {
@@ -389,105 +434,93 @@
         }
 
         .nav-btn.prev {
-             left: 20px;
-             font-size: 1rem ;
-             }
-        .nav-btn.next { right: 20px; }
+            left: 20px;
+        }
+
+        .nav-btn.next {
+            right: 20px;
+        }
 
         .nav-btn svg {
-            width: 24px;
-            height: 24px;
-            transition: transform 0.3s ease;
+            width: 20px;
+            height: 20px;
         }
 
-        .nav-btn:hover svg {
-            transform: translateX(2px);
-        }
-
-        .nav-btn.prev:hover svg {
-            transform: translateX(-2px);
-        }
-
-        /* Progress Bar */
         .progress-bar {
             position: absolute;
             bottom: 0;
             left: 0;
             height: 4px;
-            background: var(--slider-accent);
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
             z-index: 10;
             transition: width 0.1s linear;
         }
 
-        /* Counter */
         .counter {
             position: absolute;
-            top: 24px;
-            right: 24px;
-            font-size: 14px;
+            top: 20px;
+            right: 20px;
+            font-size: 0.875rem;
             font-weight: 600;
-            color: var(--bg-white);
+            color: rgba(255, 255, 255, 0.8);
             z-index: 10;
-            background: rgba(15, 15, 20, 0.6);
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
             padding: 8px 16px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .counter span {
-            color: var(--slider-accent);
+            color: var(--primary-light);
         }
 
-        /* Play/Pause */
         .play-pause {
             position: absolute;
-            top: 24px;
-            left: 24px;
-            width: 44px;
-            height: 44px;
-            background: rgba(15, 15, 20, 0.6);
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
             z-index: 10;
-            color: var(--bg-white);
+            color: #ffffff;
+            transition: var(--transition-fast);
         }
 
         .play-pause:hover {
-            background: var(--slider-accent);
-            border-color: var(--slider-accent);
-            color: var(--bg-dark);
+            background: var(--primary);
+            border-color: var(--primary);
         }
 
         .play-pause svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
         }
 
-        /* Dots Navigation */
         .dots-nav {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             justify-content: center;
             margin-top: 20px;
         }
 
         .dot {
-            width: 40px;
-            height: 6px;
-            background: var(--border-color);
-            border-radius: 3px;
+            width: 32px;
+            height: 4px;
+            background: var(--border-medium);
+            border-radius: 2px;
+            border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: var(--transition-fast);
             position: relative;
             overflow: hidden;
-            border: none;
         }
 
         .dot::after {
@@ -497,8 +530,8 @@
             top: 0;
             height: 100%;
             width: 0;
-            background: var(--slider-accent);
-            border-radius: 3px;
+            background: var(--primary);
+            border-radius: 2px;
             transition: width 0.3s ease;
         }
 
@@ -510,37 +543,36 @@
             width: 100%;
         }
 
-        /* Thumbnails */
         .thumbnails {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
             margin-top: 16px;
             flex-wrap: wrap;
         }
 
         .thumb {
-            width: 80px;
-            height: 50px;
-            border-radius: 8px;
+            width: 72px;
+            height: 48px;
+            border-radius: var(--radius-sm);
             overflow: hidden;
             cursor: pointer;
             border: 2px solid transparent;
-            transition: all 0.3s ease;
-            opacity: 0.5;
             background: none;
             padding: 0;
+            opacity: 0.6;
+            transition: var(--transition-fast);
         }
 
         .thumb:hover {
-            opacity: 0.8;
-            transform: translateY(-4px);
+            opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         .thumb.active {
-            border-color: var(--slider-accent);
+            border-color: var(--primary);
             opacity: 1;
-            box-shadow: 0 0 20px var(--slider-accent-glow);
+            box-shadow: var(--shadow-primary);
         }
 
         .thumb img {
@@ -554,298 +586,437 @@
             display: flex;
             justify-content: center;
             gap: 16px;
-            margin-top: 24px;
+            margin-top: 28px;
             flex-wrap: wrap;
         }
 
-        /* ========== BUTTONS ========== */
+        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 14px 36px;
-            background-color: var(--primary-color);
-            color: var(--bg-white);
-            border-radius: 50px;
+            gap: 8px;
+            padding: 14px 32px;
+            background: var(--primary);
+            color: #ffffff;
             font-weight: 600;
+            font-size: 0.9rem;
             border: none;
+            border-radius: 100px;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
-            transition: var(--transition);
-            font-size: 1rem;
+            transition: var(--transition-fast);
+            text-decoration: none;
+            box-shadow: var(--shadow-primary);
         }
 
         .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn:active {
+            transform: translateY(0);
         }
 
         .btn-secondary {
-            background: linear-gradient(to right, #3f74d6, #6200ff);
-            box-shadow: var(--shadow-md);
-            color: white;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            box-shadow: none;
         }
 
         .btn-secondary:hover {
-            background: linear-gradient(to right, #420a8bbb, #03aef1);
-            box-shadow: var(--shadow-lg);
+            background: var(--primary);
+            color: #ffffff;
         }
 
-        .buy-btn {
-            background: linear-gradient(to right, #80ff00, #00a634);
-            color: white;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-            padding: 14px 36px;
-            border-radius: 50px;
-            border: none;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(0, 166, 52, 0.4);
-            gap: 10px;
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
         }
 
-        .buy-btn:hover {
-            filter: brightness(1.1);
-            transform: translateY(-3px);
-            background: linear-gradient(to right, #00a634, #00faa7);
-            box-shadow: 0 6px 20px rgba(0, 166, 52, 0.6);
+        .btn-whatsapp:hover {
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* ========== SECTIONS ========== */
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            box-shadow: var(--shadow-accent);
+        }
+
+        .btn-accent:hover {
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Sections */
         main {
-            overflow: hidden;
+            position: relative;
         }
 
         section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: auto;
+            padding: 80px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-header h2 {
-            font-size: 2.25rem;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            color: var(--text-primary);
+            margin-bottom: 12px;
             position: relative;
             display: inline-block;
         }
 
         .section-header p {
-            color: var(--text-gray);
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.7;
         }
 
         .separator-line {
             width: 60px;
             height: 4px;
-            background-color: var(--accent-color);
-            margin: 10px auto 0;
+            background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+            margin: 12px auto 0;
             border-radius: 2px;
         }
 
-        /* ========== ABOUT SECTION ========== */
+        .section-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 100px;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        /* About Section */
+        .about-intro {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border-light);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .about-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--logo-red));
+        }
+
+        .about-intro p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .about-intro strong {
+            color: var(--primary);
+        }
+
+        /* Catalog Cards */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: stretch;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
         }
 
         .catalog-card {
-            background: var(--bg-white);
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            border-top: 5px solid var(--primary-color);
-            max-height: 100%;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .catalog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: var(--transition-fast);
         }
 
         .catalog-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
 
+        .catalog-card:hover::before {
+            opacity: 1;
+        }
+
         .catalog-card h3 {
-            color: var(--primary-color);
-            font-size: 1.3rem;
-            margin-bottom: 25px;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
-            border-bottom: 1px solid var(--bg-light);
-            padding-bottom: 15px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .catalog-card h3 i {
+            color: var(--primary);
+            font-size: 1.2rem;
         }
 
         .catalog-list {
-            flex-grow: 1;
+            list-style: none;
         }
 
         .catalog-list li {
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--border-color);
-            color: var(--text-gray);
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-light);
+            color: var(--text-secondary);
             display: flex;
             align-items: center;
-            transition: 0.2s;
+            gap: 10px;
             cursor: pointer;
+            transition: var(--transition-fast);
+            font-size: 0.95rem;
         }
 
         .catalog-list li:last-child {
             border-bottom: none;
         }
 
-        .catalog-list li:hover {
-            color: var(--primary-color);
-            padding-left: 8px;
-            font-weight: 500;
-        }
-
         .catalog-list li::before {
-            content: "\f054";
-            font-family: "Font Awesome 6 Free";
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
             font-weight: 900;
-            color: var(--accent-color);
-            display: inline-block;
-            width: 20px;
-            font-size: 0.8em;
-            margin-right: 5px;
+            font-size: 0.7rem;
+            color: var(--accent);
+            transition: var(--transition-fast);
         }
 
-        /* ========== PRODUCTS SECTION ========== */
-        .bg-gray {
-            background-color: var(--bg-light);
+        .catalog-list li:hover {
+            color: var(--primary);
+            padding-left: 8px;
+        }
+
+        .catalog-list li:hover::before {
+            color: var(--primary);
+        }
+
+        /* Products Section */
+        .bg-products {
+            background: linear-gradient(180deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
             width: 100%;
             max-width: 100%;
         }
 
-        /* Product Grid - improved responsiveness */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller min */
-    gap: 25px;
-}
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
 
-/* Card Image - Responsive height */
-.card-img-wrapper {
-background: var(--bg-white);
-    position: relative;
-    width: 100%;
-    padding-top: 66.66%; /* Aspect Ratio 3:2 (approx 200px on 300px width) */
-    height: 0; /* Collapse height to let padding-top control it */
-    overflow: hidden;
-    background-color: #f0f0f0;
-}
+        .product-card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+        }
 
-.card-img-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* ... transitions ... */
-}
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary);
+        }
 
         .card-img-wrapper {
-            height: 220px;
-            overflow: hidden;
             position: relative;
-            background-color: #eee;
-            border-radius: 5px;
-            box-shadow: var(--shadow-sm);
-             transition: var(--transition);
+            width: 100%;
+            padding-top: 66.67%;
+            overflow: hidden;
+            background: var(--bg-tertiary);
         }
 
         .card-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .product-card:hover img {
-            transform: scale(1.15);
-        }
-
-       .card-content {
-             padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-       }
-
-       .card-content:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
-        }
-
-        .card-content h3 {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        .card-content h4 {
-            font-size: 1rem;
-            color: var(--primary-color);
-            margin: 12px 0 6px;
-        }
-
-        .card-content p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* ========== CONTACT SECTION ========== */
-        .contact-wrapper {
-            background: var(--bg-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-md);
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-
-        .contact-info-col {
-            flex: 1;
-            min-width: 320px;
-            padding: 50px;
-        }
-
-        .contact-map-col {
-            flex: 1;
-            min-width: 300px;
-            background: #eee;
-            min-height: 400px;
-            position: relative;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 100%;
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .product-card:hover .card-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .card-content h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 12px 0 4px;
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            border: 1px solid var(--border-light);
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-section h3 {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            box-shadow: var(--shadow-primary);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Contact Section */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-info-col {
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-map-col {
+            position: relative;
+            min-height: 450px;
+        }
+
+        .map-container {
+            position: absolute;
+            inset: 0;
         }
 
         .map-container iframe {
@@ -856,93 +1027,106 @@ background: var(--bg-white);
 
         .contact-item {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 30px;
+            gap: 16px;
+            margin-bottom: 28px;
         }
 
         .icon-box {
-            background: #eff6ff;
-            color: var(--primary-color);
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: var(--radius-sm);
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
-            margin-right: 20px;
+            color: var(--primary);
             flex-shrink: 0;
-            transition: var(--transition);
+            transition: var(--transition-fast);
         }
 
         .contact-item:hover .icon-box {
-            background-color: var(--primary-color);
-            color: var(--bg-white);
+            background: var(--primary);
+            color: #ffffff;
         }
 
         .contact-details h4 {
-            color: var(--secondary-color);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin-bottom: 4px;
         }
 
-        .contact-details p {
-            color: var(--text-gray);
-            margin: 0;
-        }
-
+        .contact-details p,
         .contact-details a {
-            color: var(--text-gray);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-decoration: none;
+            transition: var(--transition-fast);
         }
 
         .contact-details a:hover {
-            color: var(--primary-color);
-            text-decoration: underline;
+            color: var(--primary);
         }
 
         .button-group {
             display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 30px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
-        /* ========== FOOTER ========== */
+        /* Footer */
         footer {
-            background-color: var(--secondary-color);
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
+            background: #1f2937;
+            border-top: 4px solid var(--accent);
+            padding: 40px 24px;
             margin-top: 80px;
-            border-top: 5px solid var(--accent-color);
+            text-align: center;
         }
 
         footer p {
-            margin: 5px 0;
-            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin: 4px 0;
         }
 
         footer strong {
-            color: var(--bg-white);
+            color: #ffffff;
         }
 
-        /* ========== MEDIA QUERIES ========== */
-        @media (max-width: 992px) {
+        /* Focus States */
+        .btn:focus-visible,
+        .nav-btn:focus-visible,
+        .dot:focus-visible,
+        .thumb:focus-visible,
+        .play-pause:focus-visible,
+        .nav-item-mobile:focus-visible,
+        .btn-submit:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
             .about-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map-col {
+                min-height: 350px;
             }
         }
 
         @media (max-width: 768px) {
             .header-top {
-                padding: 10px 20px;
-            }
-
-            .brand {
-                gap: 10px;
+                padding: 12px 16px;
             }
 
             .brand-img {
-                max-height: 40px;
+                height: 44px;
             }
 
             .brand-logo-text {
@@ -950,7 +1134,7 @@ background: var(--bg-white);
             }
 
             .brand-tagline {
-                font-size: 0.7rem;
+                font-size: 0.65rem;
             }
 
             .menu-toggle {
@@ -961,52 +1145,41 @@ background: var(--bg-white);
                 position: fixed;
                 top: 0;
                 right: -100%;
-                width: 70%;
+                width: 80%;
+                max-width: 320px;
                 height: 100vh;
-                background-color: var(--bg-white);
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                transition: 0.4s ease;
+                background: var(--bg-primary);
+                transition: right 0.3s ease;
                 z-index: 1001;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                border-top: none;
+                border-left: 1px solid var(--border-light);
             }
 
             nav.active {
                 right: 0;
             }
 
-            .nav-container {
-                flex-direction: column;
-                width: 100%;
-                height: 100%;
-                justify-content: center;
-            }
-
             .nav-list {
                 flex-direction: column;
-                width: 100%;
-                text-align: center;
-                gap: 20px;
-                padding: 20px;
+                padding: 80px 24px 24px;
+                gap: 4px;
             }
 
             .nav-item-mobile {
-                font-size: 1.2rem;
+                padding: 14px 16px;
+                font-size: 1rem;
             }
 
             .hero-section {
-                padding: 10px;
+                padding: 24px 16px;
             }
 
             .slider-wrapper {
-                aspect-ratio: 16/10;
-                border-radius: 12px;
+                aspect-ratio: 16/11;
+                border-radius: var(--radius-md);
             }
 
             .slide-content {
-                padding: 20px;
+                padding: 24px;
             }
 
             .nav-btn {
@@ -1014,125 +1187,52 @@ background: var(--bg-white);
                 height: 44px;
             }
 
-            .nav-btn.prev { left: 10px; }
-            .nav-btn.next { right: 10px; }
+            .nav-btn.prev {
+                left: 10px;
+            }
+
+            .nav-btn.next {
+                right: 10px;
+            }
 
             section {
-                padding: 50px 20px;
+                padding: 60px 16px;
+            }
+
+            .about-intro {
+                padding: 28px;
             }
 
             .catalog-card {
-                padding: 25px;
+                padding: 24px;
+            }
+
+            .form-section {
+                padding: 28px;
             }
 
             .contact-info-col {
-                padding: 30px;
+                padding: 28px;
                 order: 2;
             }
 
             .contact-map-col {
-                min-height: 300px;
                 order: 1;
+                min-height: 280px;
             }
 
             .button-group {
                 flex-direction: column;
             }
 
-            .btn, .buy-btn {
-                width: 100%;
-                justify-content: center;
-            }
-
             .thumbnails {
                 display: none;
             }
-        }
 
-        /* ========== REDUCED MOTION ========== */
-        @media (prefers-reduced-motion: reduce) {
-            .slider-track,
-            .slide img,
-            .slide-content,
-            .nav-btn,
-            .dot,
-            .thumb,
-            .reveal {
-                transition: none;
-            }
-            
-            .animate-entrance {
-                animation: none;
-                opacity: 1;
+            .product-grid {
+                grid-template-columns: 1fr;
             }
         }
-
-        /* ========== FOCUS STATES ========== */
-        .nav-btn:focus-visible,
-        .dot:focus-visible,
-        .thumb:focus-visible,
-        .play-pause:focus-visible,
-        .btn:focus-visible,
-        .buy-btn:focus-visible {
-            outline: 2px solid var(--slider-accent);
-            outline-offset: 2px;
-        }
-
-       .form-container {
-      background: transparent;
-      border: 2px solid rgba(0, 0, 0, 0.705);
-      border-radius: 20px;
-      backdrop-filter: blur(17px);
-      border-radius: 10px;
-      padding: 60px;
-      max-width: 100%;
-      margin: 40px auto;
-      font-size: 1.2rem;
-    }
-
-    .form-container:hover {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.589);
-      transform: translateY(-8px);
-      transition: all 0.8s ease-out;
-    }
-
-    .form-container label {
-      display: block;
-      margin-top: 11px;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    input, textarea, button {
-      width: 100%;
-      padding: 20px;
-      border-radius: 5px;
-      border: 1px solid #ffffff;
-      font-size: 1.5rem;
-      height: auto ;
-      box-sizing: border-box;
-    }
-
-    
-    button {
-      background: linear-gradient( to right, rgba(58, 58, 189, 0.9) ,rgba(39, 233, 155, 0.74));
-      color: white;
-      font-size: 1.4rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    button:hover { 
-
-        background: linear-gradient( to right, #00a634, #3032a3);
-      
-            transform: translateY(-3px);
-            transition: all 0.8s ease-out;
-
-     }
-
     </style>
 </head>
 
@@ -1140,7 +1240,7 @@ background: var(--bg-white);
     <!-- Header -->
     <header>
         <div class="header-top">
-            <div class="brand" onclick="window.scrollTo(0,0)">
+            <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <img src="https://files.catbox.moe/6agle1.png" alt="Logo PT Agape Olivia Sukses" class="brand-img">
                 <div class="brand-text">
                     <div class="brand-logo-text">
@@ -1150,7 +1250,7 @@ background: var(--bg-white);
                 </div>
             </div>
 
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -1159,80 +1259,53 @@ background: var(--bg-white);
 
         <nav id="navbar">
             <div class="nav-container">
-                <ul class="nav-list" id="nav-list">
-                    <li>
-                        <a href="#about" class="nav-item-mobile">
-                            <i class="fas fa-home"></i>
-                            <span>Tentang Kami</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#products" class="nav-item-mobile">
-                            <i class="fas fa-boxes-stacked"></i>
-                            <span>Daftar Produk</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#services" class="nav-item-mobile">
-                            <i class="fas fa-fire-flame-curved"></i>
-                            <span>Produk Unggulan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#laporan" class="nav-item-mobile"> 
-                            <i class="fas fa-clipboard"></i>
-                            <span>laporan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="nav-item-mobile">
-                            <i class="fas fa-envelope"></i>
-                            <span>Kontak & Alamat</span>
-                        </a>
-                    </li>
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-item-mobile"><i class="fas fa-home"></i><span>Tentang
+                                Kami</span></a></li>
+                    <li><a href="#products" class="nav-item-mobile"><i class="fas fa-boxes-stacked"></i><span>Daftar
+                                Produk</span></a></li>
+                    <li><a href="#services" class="nav-item-mobile"><i class="fas fa-fire-flame-curved"></i><span>Produk
+                                Unggulan</span></a></li>
+                    <li><a href="#laporan" class="nav-item-mobile"><i
+                                class="fas fa-clipboard"></i><span>Laporan</span></a></li>
+                    <li><a href="#contact" class="nav-item-mobile"><i
+                                class="fas fa-envelope"></i><span>Kontak</span></a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Slider Section -->
-        <section class="hero-section" style="padding-top: 30px; padding-bottom: 30px;">
-            <div class="slider-wrapper animate-entrance">
+        <!-- Hero Slider -->
+        <section class="hero-section">
+            <div class="slider-wrapper reveal">
                 <div class="slider-track" id="sliderTrack"></div>
-
                 <div class="progress-bar" id="progressBar"></div>
-
-                <div class="counter">
-                    <span id="currentSlide">01</span> / <span id="totalSlides">05</span>
-                </div>
-
+                <div class="counter"><span id="currentSlide">01</span> / <span id="totalSlides">05</span></div>
                 <button class="play-pause" id="playPauseBtn" aria-label="Play/Pause slideshow">
                     <svg id="pauseIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="6" y="4" width="4" height="16" rx="1"/>
-                        <rect x="14" y="4" width="4" height="16" rx="1"/>
+                        <rect x="6" y="4" width="4" height="16" rx="1" />
+                        <rect x="14" y="4" width="4" height="16" rx="1" />
                     </svg>
-                    <svg id="playIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    <svg id="playIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="display: none;">
+                        <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                 </button>
-
                 <button class="nav-btn prev" id="prevBtn" aria-label="Previous slide">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"/>
+                        <polyline points="15 18 9 12 15 6" />
                     </svg>
                 </button>
                 <button class="nav-btn next" id="nextBtn" aria-label="Next slide">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"/>
+                        <polyline points="9 18 15 12 9 6" />
                     </svg>
                 </button>
             </div>
-
-            <div class="dots-nav animate-entrance delay-1" id="dotsNav"></div>
-            <div class="thumbnails animate-entrance delay-2" id="thumbnails"></div>
-
-            <div class="hero-cta animate-entrance delay-3">
+            <div class="dots-nav reveal stagger-1" id="dotsNav"></div>
+            <div class="thumbnails reveal stagger-2" id="thumbnails"></div>
+            <div class="hero-cta reveal stagger-3">
                 <a href="#contact" class="btn">Hubungi Kami</a>
                 <a href="#services" class="btn btn-secondary">Lihat Produk</a>
             </div>
@@ -1243,67 +1316,65 @@ background: var(--bg-white);
             <div class="section-header reveal">
                 <h2>Tentang Kami</h2>
                 <div class="separator-line"></div>
-                <p style="margin-top: 15px;">
-                    <strong>PT. Agape Olivia Sukses</strong> bergerak dalam penyediaan heater-heater element, mesin-mesin yang didukung oleh heater-heater element, alat-alat teknik yang berhubungan dengan heater element part.
+            </div>
+
+            <div class="about-intro reveal">
+                <p><strong>PT. Agape Olivia Sukses</strong> bergerak dalam penyediaan heater element, mesin-mesin yang
+                    didukung oleh heater element, serta alat-alat teknik yang berhubungan dengan heater element part.
                 </p>
-                <p>Tentu dalam menjalankan usaha ini, kami sangat berkomitmen mengedepankan mutu (kualitas) dan ketepatan waktu (on time) serta keramahan dan etika dalam melayani seluruh customer.</p>
-                <h1></h1>
-                <p>Selain itu, kami juga terus berbenah diri dan siap berkompetisi dengan perusahaan-perusahaan lokal baik dari segi kompetensi dan juga kepuasan pelanggan.</p>
+                <p>Dalam menjalankan usaha ini, kami sangat berkomitmen mengedepankan mutu (kualitas) dan ketepatan
+                    waktu (on time) serta keramahan dan etika dalam melayani seluruh customer.</p>
+                <p>Kami juga terus berbenah diri dan siap berkompetisi dengan perusahaan-perusahaan lokal baik dari segi
+                    kompetensi dan juga kepuasan pelanggan.</p>
             </div>
         </section>
 
-        <!-- Products Menu Section -->
-        <section id="products">
+        <section id="products" class="bg-products">
             <div class="section-header reveal">
                 <h2>Daftar Produk</h2>
                 <div class="separator-line"></div>
             </div>
-            <div class="about-grid">
-                <div class="catalog-card reveal">
-                    <h3>
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        Katalog Spare Part
-                    </h3>
-                    <ul class="catalog-list">
-                        <li onclick="scrollKeProduk('Immersion Heater')">Immersion Heater</li>
-                        <li onclick="scrollKeProduk('Silicon Niritde')">Silicon Niritde</li>
-                        <li onclick="scrollKeProduk('Infrared Black Body')">Infrared Black Body</li>
-                        <li onclick="scrollKeProduk('Cartridge Heater')">Cartridge Heater</li>
-                        <li onclick="scrollKeProduk('Tubular Heater')">Tubular Heater</li>
-                        <li onclick="scrollKeProduk('Silica Quartz Heater')">Silica Quartz Heater</li>
-                        <li onclick="scrollKeProduk('Thermocouple Control')">Thermocouple Control</li>
-                        <li onclick="scrollKeProduk('Band Heater')">Band Heater</li>
-                        <li onclick="scrollKeProduk('Ceramic Heater')">Ceramic Heater</li>
-                        <li onclick="scrollKeProduk('Cast In Heater')">Cast In Heater</li>
-                        <li onclick="scrollKeProduk('Coil Heater')">Coil Heater</li>
-                        <li onclick="scrollKeProduk('Flat/Strip Heater')">Flat/Strip Heater</li>
-                        <li onclick="scrollKeProduk('Finned Heater')">Finned Heater</li>
-                    </ul>
-                </div>
 
-                <div class="catalog-card reveal">
-                    <h3>
-                        <i class="fa-solid fa-industry"></i>
-                        Katalog Mesin Industri
-                    </h3>
-                    <ul class="catalog-list">
-                        <li onclick="scrollKeProduk('Oven Circulation')">Oven Circulation</li>
-                        <li onclick="scrollKeProduk('Oven Furnice')">Oven Furnice</li>
-                        <li onclick="scrollKeProduk('Electrict Duct Heater')">Electrict Duct Heater</li>
-                        <li onclick="scrollKeProduk('Load Bank')">Load Bank</li>
-                        <li onclick="scrollKeProduk('Hot Room Instalation')">Hot Room Instalation</li>
-                        <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
-                        <li onclick="scrollKeProduk('Oven Boiler/Hot Tank')">Oven Boiler/Hot Tank</li>
-                        <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
-                        <li onclick="scrollKeProduk('heating container')">heating container</li>
-                        <li onclick="scrollKeProduk('Tubular Incoloy')">Tubular Incoloy</li>
-                        <li onclick="scrollKeProduk('Thermocouple')">Thermocouple</li>
-                    </ul>
-                </div>
+            <div class="catalog-card reveal stagger-1">
+                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Katalog Spare Part</h3>
+                <ul class="catalog-list">
+                    <li onclick="scrollKeProduk('Immersion Heater')">Immersion Heater</li>
+                    <li onclick="scrollKeProduk('Silicon Nitride')">Silicon Nitride</li>
+                    <li onclick="scrollKeProduk('Infrared Black Body')">Infrared Black Body</li>
+                    <li onclick="scrollKeProduk('Cartridge Heater')">Cartridge Heater</li>
+                    <li onclick="scrollKeProduk('Tubular Heater')">Tubular Heater</li>
+                    <li onclick="scrollKeProduk('Silica Quartz Heater')">Silica Quartz Heater</li>
+                    <li onclick="scrollKeProduk('Thermocouple Control')">Thermocouple Control</li>
+                    <li onclick="scrollKeProduk('Band Heater')">Band Heater</li>
+                    <li onclick="scrollKeProduk('Ceramic Heater')">Ceramic Heater</li>
+                    <li onclick="scrollKeProduk('Cast In Heater')">Cast In Heater</li>
+                    <li onclick="scrollKeProduk('Coil Heater')">Coil Heater</li>
+                    <li onclick="scrollKeProduk('Flat Strip Heater')">Flat/Strip Heater</li>
+                    <li onclick="scrollKeProduk('Finned Heater')">Finned Heater</li>
+                </ul>
+            </div>
+
+            <div class="catalog-card reveal stagger-2">
+                <h3><i class="fa-solid fa-industry"></i> Katalog Mesin Industri</h3>
+                <ul class="catalog-list">
+                    <li onclick="scrollKeProduk('Oven Circulation')">Oven Circulation</li>
+                    <li onclick="scrollKeProduk('Oven Furnace')">Oven Furnace</li>
+                    <li onclick="scrollKeProduk('Electric Duct Heater')">Electric Duct Heater</li>
+                    <li onclick="scrollKeProduk('Load Bank')">Load Bank</li>
+                    <li onclick="scrollKeProduk('Hot Room Instalation')">Hot Room Installation</li>
+                    <li onclick="scrollKeProduk('Oven Conveyor')">Oven Conveyor</li>
+                    <li onclick="scrollKeProduk('Oven Boiler')">Oven Boiler/Hot Tank</li>
+                    <li onclick="scrollKeProduk('Heat Exchangers')">Heat Exchangers</li>
+                    <li onclick="scrollKeProduk('heating container')">Heating Container</li>
+                    <li onclick="scrollKeProduk('Tubular Incoloy')">Tubular Incoloy</li>
+                    <li onclick="scrollKeProduk('Thermocouple')">Thermocouple</li>
+                </ul>
+            </div>
             </div>
         </section>
 
-        <!-- Services / Products Showcase -->
+        <!-- Products Section -->
+
         <div class="bg-gray">
             <section id="services" style="padding-left: 0; padding-right: 0;">
                 <div class="section-header reveal" style="padding: 0 20px;">
@@ -1821,147 +1892,108 @@ background: var(--bg-white);
 
             </section>
         </div>
+        </div>
 
+        <!-- Form Section -->
         <section id="laporan">
-             <div id="laporan" class="tab-content">
-                 <div class="section-header">
-                <h3>Permintaan anda dapat dikirimkan melaui WhatsApp kami dengan melalui formulir di bawah.</h3>
+            <div class="section-header reveal">
+                <h2>Konsultasi</h2>
                 <div class="separator-line"></div>
+                <p style="margin-top: 16px;">Kirimkan pertanyaan atau permintaan penawaran Anda melalui formulir di
+                    bawah</p>
             </div>
 
-      <h2 style="text-align:center; color:#dab08ece;">Formulir Laporan</h2>
-      <div class="form-container">
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" placeholder="Masukkan nama Anda">
-        
-        <label for="isi">Isi Laporan:</label>
-        <textarea id="isi" rows="5" placeholder="Tuliskan Pertanyaan Anda di sini"></textarea>
-
-        <button onclick="kirimLaporan()">Kirim Laporan ke WhatsApp</button>
-      </div>
-    </div>
+            <div class="form-section reveal">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="isi">Pesan / Pertanyaan</label>
+                    <textarea id="isi" rows="5"
+                        placeholder="Tuliskan pertanyaan atau permintaan Anda di sini"></textarea>
+                </div>
+                <button class="btn-submit" onclick="kirimLaporan()">
+                    <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>
+                    Kirim ke WhatsApp
+                </button>
+            </div>
         </section>
-        
+
         <!-- Contact Section -->
-        <section id="contact" class="reveal">
-            <div class="section-header">
+        <section id="contact">
+            <div class="section-header reveal">
                 <h2>Hubungi Kami</h2>
                 <div class="separator-line"></div>
             </div>
 
-            <div class="contact-wrapper">
+            <div class="contact-wrapper reveal">
                 <div class="contact-info-col">
                     <div class="contact-item">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
                         <div class="contact-details">
                             <h4>Email</h4>
                             <p><a href="mailto:agape.oliviasukses@gmail.com">agape.oliviasukses@gmail.com</a></p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
+                        <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
                         <div class="contact-details">
                             <h4>Telepon / WhatsApp</h4>
-                            <p>
-                                <a href="tel:+2182582836">+62-21 8258 2836</a><br>
-                                <a href="tel:+62811186676">+62-8111 8 6676</a>
-                            </p>
+                            <p><a href="tel:+622182582836">+62-21 8258 2836</a></p>
+                            <p><a href="tel:+62811186676">+62-8111 8 6676</a></p>
                         </div>
                     </div>
-
                     <div class="contact-item">
-                        <div class="icon-box">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
+                        <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
                         <div class="contact-details">
                             <h4>Alamat Kantor</h4>
-                            <p>Perum. Mayang Pratama Blok E10 No.23, Kel. Mustikasari, Kec. Mustika Jaya, Kota Bks, Jawa Barat 17157</p>
+                            <p>Perum. Mayang Pratama Blok E10 No.23, Kel. Mustikasari, Kec. Mustika Jaya, Kota Bekasi,
+                                Jawa Barat 17157</p>
                         </div>
                     </div>
-
                     <div class="button-group">
-                        <a class="btn btn-secondary" href="mailto:agape.oliviasukses@gmail.com">
-                            <i class="fa-solid fa-paper-plane" style="margin-right:8px"></i>
-                            Kirim Email
-                        </a>
-                        <button class="buy-btn" onclick="kirimWhatsApp()">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            Kirim WhatsApp
-                        </button>
+                        <a href="mailto:agape.oliviasukses@gmail.com" class="btn btn-secondary"><i
+                                class="fa-solid fa-paper-plane"></i> Kirim Email</a>
+                        <button class="btn btn-whatsapp" onclick="kirimWhatsApp()"><i class="fa-brands fa-whatsapp"></i>
+                            WhatsApp</button>
                     </div>
                 </div>
-
                 <div class="contact-map-col">
                     <div class="map-container">
                         <iframe
                             src="https://maps.google.com/maps?q=Perumahan%20Mayang%20Pratama%20Blok%20E10%20No.23,%20Mustikasari,%20Kec.%20Mustika%20Jaya,%20Kota%20Bekasi,%20Jawa%20Barat&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Lokasi PT. Agape Olivia Sukses">
-                        </iframe>
+                            title="Lokasi PT. Agape Olivia Sukses"></iframe>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2025 <strong>PT Agape Olivia Sukses</strong>. All rights reserved.</p>
         <p>Spesialis Heater Element & Sistem Pemanas Industri</p>
     </footer>
 
     <script>
-        // ========== SLIDER DATA ==========
+        // ========== DATA ==========
         const slides = [
-            {
-                image: 'https://files.catbox.moe/czotzj.jpg',
-                tag: 'Heater Industri',
-                title: 'Solusi Pemanas Terpercaya',
-                desc: 'Kami menyediakan kualitas heater element terbaik untuk mendukung efisiensi dan kehandalan produksi manufaktur Anda.'
-            },
-            {
-                image: 'https://files.catbox.moe/kufa54.jpg',
-                tag: 'Band Heater',
-                title: 'Band Heater Berkualitas',
-                desc: 'Digunakan dalam industri plastik, karet, pengolahan makanan, dan industri kimia untuk pemanasan yang efisien.'
-            },
-            {
-                image: 'https://files.catbox.moe/cblcmn.jpg',
-                tag: 'Cartridge Heater',
-                title: 'Cartridge Heater Presisi',
-                desc: 'Elemen pemanas dengan selubung baja tahan karat dan isolasi MgO kepadatan tinggi untuk performa optimal.'
-            },
-            {
-                image: 'https://files.catbox.moe/w67qjc.jpg',
-                tag: 'Immersion Heater',
-                title: 'Immersion Heater Efisien',
-                desc: 'Pemanas celup dengan kontrol suhu tepat dan fleksibilitas tinggi untuk berbagai aplikasi industri.'
-            },
-            {
-                image: 'https://files.catbox.moe/zyla7r.jpg',
-                tag: 'Tubular Heater',
-                title: 'Tubular Heater Serbaguna',
-                desc: 'Elemen pemanas tabung untuk pemanasan cairan, gas, dan udara dalam berbagai aplikasi industri.'
-            }
+            { image: 'https://files.catbox.moe/czotzj.jpg', tag: 'Heater Industri', title: 'Solusi Pemanas Terpercaya', desc: 'Kami menyediakan kualitas heater element terbaik untuk mendukung efisiensi dan kehandalan produksi manufaktur Anda.' },
+            { image: 'https://files.catbox.moe/kufa54.jpg', tag: 'Band Heater', title: 'Band Heater Berkualitas', desc: 'Digunakan dalam industri plastik, karet, pengolahan makanan, dan industri kimia untuk pemanasan yang efisien.' },
+            { image: 'https://files.catbox.moe/cblcmn.jpg', tag: 'Cartridge Heater', title: 'Cartridge Heater Presisi', desc: 'Elemen pemanas dengan selubung baja tahan karat dan isolasi MgO kepadatan tinggi untuk performa optimal.' },
+            { image: 'https://files.catbox.moe/w67qjc.jpg', tag: 'Immersion Heater', title: 'Immersion Heater Efisien', desc: 'Pemanas celup dengan kontrol suhu tepat dan fleksibilitas tinggi untuk berbagai aplikasi industri.' },
+            { image: 'https://files.catbox.moe/zyla7r.jpg', tag: 'Tubular Heater', title: 'Tubular Heater Serbaguna', desc: 'Elemen pemanas tabung untuk pemanasan cairan, gas, dan udara dalam berbagai aplikasi industri.' }
         ];
 
+        
+
         // ========== SLIDER STATE ==========
-       let currentIndex = 0;
-let isPlaying = true;
-let progressInterval = null;
-let progress = 0;
-
-// UBAH NILAI INI UNTUK MENGATUR KECEPATAN (dalam milidetik)
-// 15000 = 15 detik
-// 10000 = 10 detik
-// 5000 = 5 detik
-const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
-
+        let currentIndex = 0;
+        let isPlaying = true;
+        let progressInterval = null;
+        let progress = 0;
+        const SLIDE_DURATION = 12000;
 
         // ========== SLIDER ELEMENTS ==========
         let sliderTrack = null;
@@ -2025,7 +2057,6 @@ const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
             prevBtn.addEventListener('click', prevSlide);
             nextBtn.addEventListener('click', nextSlide);
             playPauseBtn.addEventListener('click', togglePlayPause);
-
             document.addEventListener('keydown', handleKeyboard);
 
             const sliderWrapper = document.querySelector('.slider-wrapper');
@@ -2055,24 +2086,11 @@ const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
 
         function updateSlider() {
             if (!sliderTrack) return;
-            
             sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-            document.querySelectorAll('.slide').forEach((slide, i) => {
-                slide.classList.toggle('active', i === currentIndex);
-            });
-
-            document.querySelectorAll('.dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
-            });
-
-            document.querySelectorAll('.thumb').forEach((thumb, i) => {
-                thumb.classList.toggle('active', i === currentIndex);
-            });
-
-            if (currentSlideEl) {
-                currentSlideEl.textContent = String(currentIndex + 1).padStart(2, '0');
-            }
+            document.querySelectorAll('.slide').forEach((s, i) => s.classList.toggle('active', i === currentIndex));
+            document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            document.querySelectorAll('.thumb').forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+            if (currentSlideEl) currentSlideEl.textContent = String(currentIndex + 1).padStart(2, '0');
         }
 
         function startAutoPlay() {
@@ -2080,99 +2098,81 @@ const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
             progress = 0;
             progressInterval = setInterval(() => {
                 progress += 100 / (SLIDE_DURATION / 50);
-                if (progressBar) {
-                    progressBar.style.width = `${Math.min(progress, 100)}%`;
-                }
-                if (progress >= 100) {
-                    nextSlide();
-                }
+                if (progressBar) progressBar.style.width = `${Math.min(progress, 100)}%`;
+                if (progress >= 100) nextSlide();
             }, 50);
         }
 
         function resetProgress() {
             progress = 0;
-            if (progressBar) {
-                progressBar.style.width = '0%';
-            }
-            if (isPlaying) {
-                clearInterval(progressInterval);
-                startAutoPlay();
-            }
+            if (progressBar) progressBar.style.width = '0%';
+            if (isPlaying) { clearInterval(progressInterval); startAutoPlay(); }
         }
 
-        function pauseAutoPlay() {
-            clearInterval(progressInterval);
-        }
-
-        function resumeAutoPlay() {
-            if (isPlaying) {
-                startAutoPlay();
-            }
-        }
+        function pauseAutoPlay() { clearInterval(progressInterval); }
+        function resumeAutoPlay() { if (isPlaying) startAutoPlay(); }
 
         function togglePlayPause() {
             isPlaying = !isPlaying;
-            if (isPlaying) {
-                if (playIcon) playIcon.style.display = 'none';
-                if (pauseIcon) pauseIcon.style.display = 'block';
-                startAutoPlay();
-            } else {
-                if (playIcon) playIcon.style.display = 'block';
-                if (pauseIcon) pauseIcon.style.display = 'none';
-                pauseAutoPlay();
-            }
+            if (isPlaying) { playIcon.style.display = 'none'; pauseIcon.style.display = 'block'; startAutoPlay(); }
+            else { playIcon.style.display = 'block'; pauseIcon.style.display = 'none'; pauseAutoPlay(); }
         }
 
         function handleKeyboard(e) {
-            switch(e.key) {
-                case 'ArrowLeft':
-                    prevSlide();
-                    break;
-                case 'ArrowRight':
-                    nextSlide();
-                    break;
-                case ' ':
-                    e.preventDefault();
-                    togglePlayPause();
-                    break;
-            }
+            if (e.key === 'ArrowLeft') prevSlide();
+            else if (e.key === 'ArrowRight') nextSlide();
+            else if (e.key === ' ') { e.preventDefault(); togglePlayPause(); }
+        }
+
+        // ========== PRODUCTS ==========
+        function initProducts() {
+            const grid = document.getElementById('productGrid');
+            if (!grid) return;
+            products.forEach((p, i) => {
+                const card = document.createElement('div');
+                card.id = p.id;
+                card.className = 'product-card reveal';
+                card.style.transitionDelay = `${(i % 6) * 0.1}s`;
+                let pointsHTML = p.points.map(pt => `<h4>${pt.t}</h4><p>${pt.d}</p>`).join('');
+                card.innerHTML = `
+                    <div class="card-img-wrapper"><img src="${p.img}" alt="${p.title}" loading="lazy"></div>
+                    <div class="card-content"><h3>${p.title}</h3>${pointsHTML}</div>
+                `;
+                grid.appendChild(card);
+            });
         }
 
         // ========== MOBILE MENU ==========
         function initMobileMenu() {
             const menuToggle = document.getElementById('mobile-menu');
             const nav = document.getElementById('navbar');
-
-            if (menuToggle && nav) {
-                menuToggle.addEventListener('click', () => {
-                    nav.classList.toggle('active');
+            if (!menuToggle || !nav) return;
+            menuToggle.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                const bars = menuToggle.querySelectorAll('.bar');
+                if (nav.classList.contains('active')) {
+                    bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+                    bars[1].style.opacity = '0';
+                    bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+                } else {
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
+                }
+            });
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
                     const bars = menuToggle.querySelectorAll('.bar');
-                    if (nav.classList.contains('active')) {
-                        bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-                        bars[1].style.opacity = '0';
-                        bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-                    } else {
-                        bars[0].style.transform = 'none';
-                        bars[1].style.opacity = '1';
-                        bars[2].style.transform = 'none';
-                    }
+                    bars[0].style.transform = 'none';
+                    bars[1].style.opacity = '1';
+                    bars[2].style.transform = 'none';
                 });
-
-                nav.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        nav.classList.remove('active');
-                        const bars = menuToggle.querySelectorAll('.bar');
-                        bars[0].style.transform = 'none';
-                        bars[1].style.opacity = '1';
-                        bars[2].style.transform = 'none';
-                    });
-                });
-            }
+            });
         }
 
         // ========== SCROLL REVEAL ==========
         function initScrollReveal() {
-            const observerOptions = { threshold: 0.15 };
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -2180,47 +2180,40 @@ const SLIDE_DURATION = 15000;  // <-- DI SINI DIUBAH MENJADI 15 DETIK
                         observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
-
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         }
 
         // ========== WHATSAPP ==========
+        const nomorTelepon = "62811186676";
+
         function kirimWhatsApp() {
-            const nomorWA = "62811186676";
             const pesan = "Halo PT Agape Olivia Sukses, saya ingin bertanya mengenai produk heater industri Anda.";
-            window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`, '_blank');
+            window.open(`https://wa.me/${nomorTelepon}?text=${encodeURIComponent(pesan)}`, '_blank');
         }
 
-        // ========== SCROLL TO PRODUCT ==========
+        function kirimLaporan() {
+            const nama = document.getElementById("nama").value.trim();
+            const isi = document.getElementById("isi").value.trim();
+            if (!nama || !isi) { alert("Nama dan isi pesan harus diisi!"); return; }
+            const pesan = `Halo, saya *${nama}* ingin bertanya:\n\n${isi}`;
+            window.open(`https://wa.me/${nomorTelepon}?text=${encodeURIComponent(pesan)}`, "_blank");
+        }
+
         function scrollKeProduk(idProduk) {
-            const element = document.getElementById(idProduk);
-            if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
+            setTimeout(() => {
+                const element = document.getElementById(idProduk);
+                if (element) element.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 100);
         }
 
         // ========== INITIALIZE ==========
         document.addEventListener('DOMContentLoaded', () => {
             initSlider();
+            initProducts();
             initMobileMenu();
             initScrollReveal();
         });
-
-          function kirimLaporan() {
-      const nama = document.getElementById("nama").value;
-      const isi = document.getElementById("isi").value;
-
-      if (!nama || !isi) {
-        alert("Nama dan isi laporan harus diisi!");
-        return;
-      }
-
-      const pesan = `Halo, saya *${nama}* ingin melaporkan:\n\n${isi}`;
-      const url = `https://wa.me/${nomorTelepon}?text=${encodeURIComponent(pesan)}`;
-      window.open(url, "_blank");
-    }
-
     </script>
 </body>
 
