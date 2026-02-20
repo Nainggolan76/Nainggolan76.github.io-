@@ -181,14 +181,14 @@
 
         /* Navigation */
         nav {
-            background: transparent;
+            background: var(--bg-tertiary);
             border-top: 1px solid var(--border-light);
         }
 
         .nav-container {
-            display: inline-block;
-            padding: 6px 16px;
-            
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
         .nav-list {
@@ -197,21 +197,20 @@
             gap: 8px;
             padding: 12px 0;
             list-style: none;
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
-            border-radius: 20px;
         }
 
         .nav-item-mobile {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 35px 35px;
+            padding: 30px 25px;
             color: var(--text-secondary);
-            font-size: 0.875rem;
+            font-size: 0.975rem;
             font-weight: 900;
             border-radius: var(--radius-sm);
             transition: var(--transition-fast);
             text-decoration: none;
+            box-shadow: #111827 0px 4px 14px rgba(37, 99, 235, 0.25);
         }
 
         .nav-item-mobile i {
@@ -241,8 +240,8 @@
         }
 
         .bar {
-            width: 28px;
-            height: 3px;
+            width: 24px;
+            height: 2px;
             background: var(--text-primary);
             border-radius: 2px;
             transition: var(--transition-fast);
@@ -531,7 +530,7 @@
             justify-content: center;
             gap: 8px;
             padding: 14px 32px;
-            background:linear-gradient(to right, #00ff37, var(--primary));
+            background:linear-gradient(--primaz);
             color: #ffffff;
             font-weight: 600;
             font-size: 0.9rem;
@@ -544,7 +543,7 @@
         }
 
         .btn:hover {
-            background: linear-gradient(to right, #25d366, #180082);
+            background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
         }
@@ -554,14 +553,15 @@
         }
 
         .btn-secondary {
-            background: linear-gradient(to right, #00ff00, #2563eb);
-            color: var(--bg-tertiary);
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
             box-shadow: none;
         }
 
         .btn-secondary:hover {
-            background: linear-gradient(to right, #c2f800, #2563eb);
-            color: var(--bg-primary);
+            background: var(--primary);
+            color: #ffffff;
         }
 
         .btn-whatsapp {
@@ -882,7 +882,7 @@
         .btn-submit {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(to right, #25d366, #00f800);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: #ffffff;
             font-weight: 600;
             font-size: 1rem;
@@ -1061,10 +1061,9 @@
 
             .nav-list {
                 flex-direction: column;
-                padding: 90px 50px 50px;
-                gap: 20px;
+                padding: 80px 24px 24px;
+                gap: 4px;
             }
-            
 
             .nav-item-mobile {
             display: flex;
@@ -1349,7 +1348,7 @@
                     <!-- Card 4: Immersion Heater -->
                     <div id="Immersion Heater" class="product-card reveal">
                         <div class="card-img-wrapper">
-                            <img src="https://files.catbox.moe/5i4z7c.jpg" alt="Immersion Heater" loading="lazy">
+                            <img src="https://files.catbox.moe/3v948e.jpg" alt="Immersion Heater" loading="lazy">
                         </div>
                         <div class="card-content">
                             <h3>Immersion Heater</h3>
@@ -1744,13 +1743,13 @@
                         </div>
                     </div>
 
-                    <!-- Card 29: Heating Container/Hot Room -->
-                    <div id="Heating Container/Hot Room" class="product-card reveal">
+                    <!-- Card 29: Heating Container -->
+                    <div id="heating container" class="product-card reveal">
                         <div class="card-img-wrapper">
-                            <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="Heating Container/Hot Room" loading="lazy">
+                            <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="heating container" loading="lazy">
                         </div>
                         <div class="card-content">
-                            <h3>Heating Container/Hot Room</h3>
+                            <h3>Heating Container</h3>
                             <h4>1. Sistem</h4>
                             <p>Dilengkapi dengan alat pemanas aktif yang memungkinkan pengguna mengatur suhu di dalam kontainer sesuai kebutuhan.</p>
                             <h4>2. Isolasi Termal</h4>
