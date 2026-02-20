@@ -181,14 +181,14 @@
 
         /* Navigation */
         nav {
-            background: var(--bg-tertiary);
+            background: transparent;
             border-top: 1px solid var(--border-light);
         }
 
         .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
+            display: inline-block;
+            padding: 6px 16px;
+            
         }
 
         .nav-list {
@@ -197,16 +197,18 @@
             gap: 8px;
             padding: 12px 0;
             list-style: none;
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+            border-radius: 20px;
         }
 
         .nav-item-mobile {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 35px 35px;
             color: var(--text-secondary);
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 900;
             border-radius: var(--radius-sm);
             transition: var(--transition-fast);
             text-decoration: none;
@@ -239,8 +241,8 @@
         }
 
         .bar {
-            width: 24px;
-            height: 2px;
+            width: 28px;
+            height: 3px;
             background: var(--text-primary);
             border-radius: 2px;
             transition: var(--transition-fast);
@@ -333,6 +335,7 @@
             margin-bottom: 12px;
             color: #ffffff;
             max-width: 600px;
+        
         }
 
         .slide-desc {
@@ -340,6 +343,7 @@
             font-size: 1rem;
             max-width: 500px;
             line-height: 1.7;
+            cursor: pointer;
         }
 
         /* Slider Controls */
@@ -527,7 +531,7 @@
             justify-content: center;
             gap: 8px;
             padding: 14px 32px;
-            background: var(--primary);
+            background:linear-gradient(to right, #00ff37, var(--primary));
             color: #ffffff;
             font-weight: 600;
             font-size: 0.9rem;
@@ -540,7 +544,7 @@
         }
 
         .btn:hover {
-            background: var(--primary-dark);
+            background: linear-gradient(to right, #25d366, #180082);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
         }
@@ -550,15 +554,14 @@
         }
 
         .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            background: linear-gradient(to right, #00ff00, #2563eb);
+            color: var(--bg-tertiary);
             box-shadow: none;
         }
 
         .btn-secondary:hover {
-            background: var(--primary);
-            color: #ffffff;
+            background: linear-gradient(to right, #c2f800, #2563eb);
+            color: var(--bg-primary);
         }
 
         .btn-whatsapp {
@@ -879,7 +882,7 @@
         .btn-submit {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(to right, #25d366, #00f800);
             color: #ffffff;
             font-weight: 600;
             font-size: 1rem;
@@ -1058,14 +1061,30 @@
 
             .nav-list {
                 flex-direction: column;
-                padding: 80px 24px 24px;
-                gap: 4px;
+                padding: 90px 50px 50px;
+                gap: 20px;
             }
+            
 
             .nav-item-mobile {
-                padding: 14px 16px;
-                font-size: 1rem;
-            }
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .nav-item-mobile i {
+            font-size: 1rem;
+            color: var(--primary);
+            opacity: 0.8;
+            transition: var(--transition-fast);
+        }
 
             .hero-section {
                 padding: 24px 16px;
@@ -1330,7 +1349,7 @@
                     <!-- Card 4: Immersion Heater -->
                     <div id="Immersion Heater" class="product-card reveal">
                         <div class="card-img-wrapper">
-                            <img src="https://files.catbox.moe/3v948e.jpg" alt="Immersion Heater" loading="lazy">
+                            <img src="https://files.catbox.moe/5i4z7c.jpg" alt="Immersion Heater" loading="lazy">
                         </div>
                         <div class="card-content">
                             <h3>Immersion Heater</h3>
@@ -1725,13 +1744,13 @@
                         </div>
                     </div>
 
-                    <!-- Card 29: Heating Container -->
-                    <div id="heating container" class="product-card reveal">
+                    <!-- Card 29: Heating Container/Hot Room -->
+                    <div id="Heating Container/Hot Room" class="product-card reveal">
                         <div class="card-img-wrapper">
-                            <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="heating container" loading="lazy">
+                            <img src="https://files.catbox.moe/uw7a2r.jpeg" alt="Heating Container/Hot Room" loading="lazy">
                         </div>
                         <div class="card-content">
-                            <h3>Heating Container</h3>
+                            <h3>Heating Container/Hot Room</h3>
                             <h4>1. Sistem</h4>
                             <p>Dilengkapi dengan alat pemanas aktif yang memungkinkan pengguna mengatur suhu di dalam kontainer sesuai kebutuhan.</p>
                             <h4>2. Isolasi Termal</h4>
