@@ -361,7 +361,7 @@
             justify-content: center;
             cursor: pointer;
             z-index: 10;
-            color: #ffffff;
+            color: #f7f7f7;
             transition: var(--transition-fast);
         }
 
@@ -523,15 +523,16 @@
             flex-wrap: wrap;
         }
 
-        /* Buttons */
+        /* Buttons - PERBAIKAN GRADASI DI SINI */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             padding: 14px 32px;
-            background:linear-gradient(--primaz);
-            color: #ffffff;
+            /* Diperbaiki: syntax linear-gradient dan arah ditambah 135deg untuk estetika */
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #ffffff; /* Diperbaiki: warna teks diubah ke putih agar kontras */
             font-weight: 600;
             font-size: 0.9rem;
             border: none;
@@ -543,9 +544,9 @@
         }
 
         .btn:hover {
-            background: var(--primary-dark);
+            background: linear-gradient(to right, #0062ff, #00b1f7);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
         }
 
         .btn:active {
